@@ -7,6 +7,10 @@
 <url> <loc>https://discuzhub.kidozh.com/en/dev-blog/release-v2.6/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh/dev-blog/release-v2.6/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh-hk/dev-blog/release-v2.6/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/dev-blog/release-v3.0/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/en/dev-blog/release-v3.0/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/zh/dev-blog/release-v3.0/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/zh-hk/dev-blog/release-v3.0/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/dev-blog/discuz_api_upload_4_to_5/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/en/dev-blog/discuz_api_upload_4_to_5/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh/dev-blog/discuz_api_upload_4_to_5/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -150,6 +154,10 @@
 <url> <loc>https://discuzhub.kidozh.com/en/test-my-bbs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh/test-my-bbs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh-hk/test-my-bbs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/upgrade-api-guide/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/en/upgrade-api-guide/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/zh/upgrade-api-guide/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/zh-hk/upgrade-api-guide/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/en/404.html</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh/404.html</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh-hk/404.html</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{VDbO:function(n,p,w){"use strict";w.r(p);w("q1tI"),w("52Oh"),w("FwpG"),w("KHkp"),w("aMMl"),w("1nno"),w("qKvR");p.default=TermsPage}}]);
+//# sourceMappingURL=component---src-pages-upgrade-api-guide-js-1a0232bf55e957cea500.js.map

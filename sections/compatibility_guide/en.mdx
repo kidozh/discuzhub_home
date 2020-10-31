@@ -1,0 +1,74 @@
+import { Card, Box, Grid, Image, Link, Alert, Message, Avatar } from 'theme-ui'
+
+# Welcome to read our Discuz! Compatibility guidance
+
+DiscuzHub can support Discuz! based BBS, but may encounter various problems in practice. Therefore, we are here to provide some suggestions and guidance for the web administrators so that the forum can be better displayed on DiscuzHub.
+
+## Compatibility requirements
+
+Because DiscuzHub uses Discuz! mobile API, the BBS needs to meet the following requirements to display threads and posts correctly.
+
++ The BBS is built with Discuz X
++ Discuz version is greater than X 3.2
++ Mobile API version is greater than 4
++ Open **mobile page** and turn off anti-capture module
++ Close other plugins that may affect API access (known plugins including Qianfan.com)
+
+### Open the mobile page
+
+1. Log in to the forum with an administrator account
+2. Click the management center in the list of web pages in the upper right corner -> Discuz! Management center
+3. Use the administrator account to log in to Discuz! Management Center
+4. Global-&gt; Mobile version access settings-&gt; Open mobile version-&gt; Submit
+
+Completing the above operations, you can browse the mobile API. And your bbs can be detected and parsed by DiscuzHub
+
+### Turn off anti-capture
+
+1. Log in to the forum with an administrator account
+2. Click the management center in the list of web pages in the upper right corner -> Discuz! Management center
+3. Use the administrator account to log in to Discuz! Management Center
+4. Global -&gt; Whether to enable anti-collection -&gt; No -&gt; Submit
+
+Completing the above operations, the API can be accessed normally.
+
+<Message>The anti-capture mechanism requires us to parse JavaScript scripts, add normal cookies, and then redirect to the real API page when obtaining the requested content. However, due to security and compatibility requirements, we will not parse the Javascript file, so the anti-collection mechanism will eventually prevent DiscuzHub from accessing data. </Message>
+
+## Other compatibility recommendations
+
+### The category label under each sub-forum, please use &lt;font&gt; carefully to designate font color
+
+Since we support the dark mode, our label background color will change according to the HTML which we also support. Using &lt;font&gt; labels to designate colors will make the text difficult to recognize and weaken the user's perception. Therefore, we recommend that you do not use font tag to emphasize or highlight a category.
+
+We recommend that you use emoticons in HTML to identify categories, such as:
+
++ 🤔 Doubt
++ 😃 Solved
++ 🧐 Investigating
++ 🎉 Good advice
++ 🧧 Welfare
++ 💎 Digest
++ 😎 EMMMMMMMM
+
+### Color configuration
+
+Many forums may use custom colors to mark or highlight certain fields. Since we support two sets of display modes at the same time, please use dark / light colors to mark or highlight fields carefully. Black or white color will make highlight field unrecognizable in the night mode / day mode, because the text is too difficult to distinguish from the background. We recommend that you use CSS to specify attributes such as color. The hard coding of colors may cause display difficulty in different display mode.
+
+The color matching we currently use is:
+
+
+| Mode | Primary Color | Primary Dark Color | Accent Color |
+| ---- | ---- | ---- | ---- |
+| Day mode | <Avatar bg = {"#3498DB"} /> # 3498DB | <Avatar bg = {"#2980B9"} /> # 2980B9 | <Avatar bg = {"#E74C3C"} /> # E74C3C |
+| Night mode | <Avatar bg = {"#BB86FC"} /> # BB86FC | <Avatar bg = {"#8E24AA"} /> # 8E24AA | <Avatar bg = {"#00796B"} /> # 00796B |
+
+You can refer to it to determine your designated color which should be recognizable in both mode.
+
+### About the forum icon
+
+We noticed that some forums may have a URL prefix  in the forum icon. Please double check that the icon link is pointing correctly to avoid the problem that the icon cann't be displayed.
+
+
+## Contact us
+
+If you have comments and suggestions on the displayed issues and compatibility issues, please send an email to kidozh@gmail.com. We will answer your questions as soon as possible and make necessary amendments.

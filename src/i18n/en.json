@@ -1,0 +1,159 @@
+{
+    "title": "Discuz Hub",
+    "description": "Easy, lightweight and open-sourced android app for discuz! mobile",
+    "intro": {
+        "title": "Discuz Hub",
+        "description": "Easy, lightweight and open-sourced android app for discuz! mobile",
+        "function_annotate": "The bbs needs to turn on mobile page and disable native anti-spam filter",
+        "download_by_github": "Download by Github release",
+        "download_by_weiyun": "Download by Tencent Weiyun",
+        "project_at_github": "DiscuzHub@Github",
+        "lightweight":"Lightweight",
+        "discuz_app":"Discuz! Android App",
+        "administrator_note":"You may use this link to make your bbs compatible with us!👉"
+    },
+    "feature": {
+        "features": "Features",
+        "lightweight": "Lightweight",
+        "lightweight_annotate": "Apk is less than 20MB but still supports most discuz! operations",
+        "open_source": "Open source",
+        "open_source_annotate": "The project is open-sourced with MIT License and hosted at github",
+        "android_support": "Android Q support",
+        "android_support_annotate": "App is compatible with new Android Q features(Dark mode and permission etcs)",
+        "green_android_convention_support": "Green android supports",
+        "green_android_convention_support_annotate": "The app is designed coordinated with green android convention version 4.0"
+    },
+    "about": {
+        "about": "About",
+        "about_description": "The project (Discuz Hub) is open-sourced with MIT License",
+        "roadmap": "Technology roadmap",
+        "roadmap_1": "Add record for personal historical threads and posts",
+        "roadmap_2": "Natively support seccode"
+    },
+    "contact": {
+        "contact": "Contact",
+        "contact_description": "You may contact me with the following links",
+        "contact_1": "kidozh@gmail.com (Developer email)",
+        "contact_2": "DiscuzHub@Github",
+        "github_action_acknowledged": "Fork, star or pull request on the project are sincerely acknowledged.",
+        "contact_us":"Contact us",
+        "email":"Email",
+        "github":"Github"
+    },
+    "footer": {
+        "copyright": "Copyrights",
+        "copyright_rights_reserved": "All rights reserved",
+        "docs_with": "Docs with ",
+        "notice": "Notice",
+        "links": "Links",
+        "light":"Light",
+        "dark":"Dark"
+    },
+    "author": "@kidozh",
+    "hello": "Hi people",
+    "notfound": {
+        "header": "NOT FOUND",
+        "description": "You just hit a route that doesn't exist... the sadness. 🤔"
+    },
+    "nav":{
+        "blog": "Blog",
+        "contact": "Contact",
+        "faq": "FAQ",
+        "features": "Features",
+        "privacy": "Privacy Policy",
+        "terms_of_use":"Terms of Use"
+        
+
+    },
+    "blog":{
+        "blog": "Developer Blog",
+        "blog_annotation" :"🧐 will publish any update, policy, security and other neccessary information here in simplified Chinese.",
+        "timeToReadUnit": "{min} Minutes",
+        "publishTime": "Published {time}",
+        "allPostCounts": "Total {posts} Posts"
+    },
+    "test-my-bbs":{
+        "title":"Comaptibility test with discuz!",
+        "data-source-note":"The page will use your broswer as client to broswe API, please make sure your network is reachable",
+        "url":"URL",
+        "submit":"Submit",
+        "warn_suggestion":"Suggestion",
+        "warn_enter_to_check_problem":"Press enter key to get error information",
+        "warn_need_protocol":"You need to add HTTP or HTTPS protocol",
+        "api_full_text":"Target API : {fullApi}",
+        "url_example":"URL example",
+        "discuz_version":"Discuz! Version",
+        "charset":"Charset",
+        "api_version":"API Version",
+        "plugin_version":"Plugin Version",
+        "register_name":"Register name",
+        "qq_connect":"QQ connect",
+        "hide_register":"Hide registration",
+        "site_name":"Site name",
+        "site_id":"Site ID",
+        "ucenter_url":"Ucenter URL",
+        "default_fid":"Default forum ID",
+        "total_post":"Post number",
+        "total_members":"Member number",
+        "test_cookie":"Test Cookie",
+        "yes":"yes",
+        "no":"no",
+        "key":"Key",
+        "value":"Value",
+        "compatible":"Compatible",
+        "result_ok":"Get the response successfully",
+        "result_failed":"Failed to get response, code: {code}",
+        "raw_result":"Original result",
+        "attributes":"Attributes",
+        "redirect_by_cross_anywhere":"Redirect by cross anywhere",
+        "ajax_send_request":"Send request to {url}",
+        "bbs_pass_result":"The BBS passed with primary test but still needs further concern",
+        "bbs_not_pass_result":"Oops, your bbs cannot work with discuzHub",
+        "loading_data":"Loading data from server: {url}",
+        "app_add_guide":"You can add {name} to discuzHub by URL: {url}",
+        "example":"Example"
+    
+    },
+    "back_to_top":"Back to top",
+    "faq":{
+        "faq":"FAQ",
+        "faq_full":"Frequent Ask Question"
+    },
+    "privacy":{
+        "privacy_policy":"Privacy Policy",
+        "welcome_to_read":"Welcome to read the privacy policy"
+    },
+    "term_of_service":{
+        "term_of_service":"Terms of services",
+        "welcome_to_read":"Welcome to read the our terms of services"
+    },
+    "index":{
+        "cross_platform_title":"Browse across most discuz! BBS",
+        "cross_platform_content":"Use DiscuzHub for most discuz! BBS - Native app for discussing, polling and friending",
+        "speed_and_performance_title":"Speed and performance",
+        "speed_and_performance_content":"Using up-to-date API and following green android convention, our app have only 6 Megabytes \n Discuzhub puts you in control over practice. Requring light-weight APIs and packages, the app can run smoothly on low-profile devices.",
+        "powerful_tool_title":"Powerful tool",
+        "powerful_tool_content":"By open-sourced packages, discuzhub now can handle variety of messages. Using Discuz! open native API, you can enjoy native services which ensures your data safety. Keep compatible and safe all on your browsing.",
+        "open_source_title":"Open source software",
+        "open_source_content":"Licensed by MIT, you can watch, change and redistribute software on your own. The software is on your oyster.",
+        "fork_on_github_title":"Contribute to us",
+        "fork_on_github_content":"Are you developer? Please feel free to star, fork and make pull request to us!",
+        "any":"Cross most discuz! BBS"
+    },
+    "open_source":{
+        "open_source_title":"Open source library",
+        "open_source_subtitle":"As a open source software, we build with these library",
+        "discuzHub_licence_description":"DiscuzHub is open-sourced with MIT Licence"
+
+    },
+    "compatibility":{
+        "compatibility_title":"Compatibility guide with Discuz!",
+        "compatibility_subtitle":"The web administrator can better display BBS on DiscuzHub",
+        "discuzHub_licence_description":"DiscuzHub"
+    },
+    "add_bbs":{
+        "add_bbs_title":"Guide for users to add a BBS",
+        "compatibility_subtitle":"版主可以使用下面的设置以更好地使你的论坛展示在DiscuzHub上",
+        "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
+    }
+}

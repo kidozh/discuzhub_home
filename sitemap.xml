@@ -3,6 +3,10 @@
 <url> <loc>https://discuzhub.kidozh.com/en/offline-plugin-app-shell-fallback/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh/offline-plugin-app-shell-fallback/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh-hk/offline-plugin-app-shell-fallback/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/dev-blog/release-v4.3/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/en/dev-blog/release-v4.3/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/zh/dev-blog/release-v4.3/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/zh-hk/dev-blog/release-v4.3/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/dev-blog/release-v4.1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/en/dev-blog/release-v4.1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh/dev-blog/release-v4.1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>

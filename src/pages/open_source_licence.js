@@ -79,15 +79,6 @@ const OpenSourcePage = () => {
 
                 <Box>
                     <OpenLibCard 
-                    title="Butter Knife"
-                    licence="Apache 2.0"
-                    link="https://jakewharton.github.io/butterknife/">
-                        Field and method binding for Android views
-                    </OpenLibCard>
-                </Box>
-
-                <Box>
-                    <OpenLibCard 
                     title="PersistentCookieJar"
                     licence="Apache 2.0"
                     link="https://github.com/franmontiel/PersistentCookieJar">
@@ -122,23 +113,6 @@ const OpenSourcePage = () => {
                     </OpenLibCard>
                 </Box>
                 
-                <Box>
-                    <OpenLibCard 
-                    title="Badgeview"
-                    licence="Apache-2.0"
-                    link="https://github.com/liyanxi/BadgeView">
-                        BadgeView for android
-                    </OpenLibCard>
-                </Box>
-
-                <Box>
-                    <OpenLibCard 
-                    title="ShapedImageView"
-                    licence="MIT"
-                    link="https://github.com/gavinliu/ShapedImageView">
-                        Android Rounded, Circle, Path ImageView
-                    </OpenLibCard>
-                </Box>
             </Grid>
             <Grid bg="primary" sx={{
                 mb:4,

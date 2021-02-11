@@ -150,7 +150,12 @@
         "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
     },
     "compatibility":{
-        "compatibility_title":"Discuz！论坛兼容DiscuzHub列表",
+        "compatibility_title":"为DiscuzHub展示优化",
+        "compatibility_subtitle":"版主可以使用下面的设置以更好地使你的论坛展示在DiscuzHub上",
+        "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
+    },
+    "customize":{
+        "customize_title":"构建专属某个论坛的应用",
         "compatibility_subtitle":"版主可以使用下面的设置以更好地使你的论坛展示在DiscuzHub上",
         "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
     },

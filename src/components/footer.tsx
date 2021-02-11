@@ -92,6 +92,7 @@ const Footer = () => {
             <Box><Link to="/open_source_licence/">{intl.formatMessage({ id: "open_source.open_source_title" })}</Link></Box>
             <Box><Link to="/compatibility-guide/">{intl.formatMessage({ id: "compatibility.compatibility_title" })}</Link></Box>
             <Box><Link to="/add-a-bbs-guide/">{intl.formatMessage({ id: "add_bbs.add_bbs_title" })}</Link></Box>
+            <Box><Link to="/customize-bbs/">{intl.formatMessage({ id: "customize.customize_title" })}</Link></Box>
           </Grid>
         </Box>
 

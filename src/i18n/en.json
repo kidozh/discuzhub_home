@@ -151,9 +151,15 @@
         "compatibility_subtitle":"The web administrator can better display BBS on DiscuzHub",
         "discuzHub_licence_description":"DiscuzHub"
     },
+    "customize":{
+        "customize_title":"Make the delicate app",
+        "compatibility_subtitle":"版主可以使用下面的设置以更好地使你的论坛展示在DiscuzHub上",
+        "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
+    },
     "add_bbs":{
         "add_bbs_title":"Guide for users to add a BBS",
         "compatibility_subtitle":"版主可以使用下面的设置以更好地使你的论坛展示在DiscuzHub上",
         "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
     }
+    
 }

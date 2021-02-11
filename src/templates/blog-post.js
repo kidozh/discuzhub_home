@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import {Styled, jsx, Divider, Flex, Container, Box, NavLink,useColorMode, Grid, Heading, Avatar, Text, Badge} from 'theme-ui'
-import React from "react"
+import {Styled, jsx, Divider, Container, Box,  Grid, Heading, Avatar, Text, Badge} from 'theme-ui'
 import { Link as GatsbyLink, graphql } from "gatsby"
 import {Link, useIntl } from "gatsby-plugin-intl"
 import BlogCover from "../components/blog-cover"

@@ -10,16 +10,16 @@
         "project_at_github": "托管于Github上的项目",
         "lightweight":"轻量的",
         "discuz_app":"Discuz!安卓应用",
-        "administrator_note":"版主吗？你可以在这里配置你的论坛以兼容我们的应用👉"
+        "administrator_note":"版主可以点击这里更好的兼容我们的应用👉"
     },
     "feature": {
         "features": "特性",
         "lightweight": "轻量化",
-        "lightweight_annotate": "APK安装包不到20M，支持完整的Discuz！发帖任务",
+        "lightweight_annotate": "APK安装包不到10M，支持完整的Discuz！发帖任务",
         "open_source": "开源软件",
         "open_source_annotate": "本项目基于MIT开源协议开源，项目托管于Github上",
-        "android_support": "Android Q 支持",
-        "android_support_annotate": "应用支持诸多Android Q的新特性（比如深色模式，新的文件管理方式等）",
+        "android_support": "Android 11 支持",
+        "android_support_annotate": "应用支持诸多Android 11的新特性（比如深色模式，新的文件管理方式等）",
         "green_android_convention_support": "全面支持Android绿色公约",
         "green_android_convention_support_annotate": "应用遵循第4版Android绿色公约进行设计",
         "download_by_github": "通过Github release下载",
@@ -133,12 +133,12 @@
         "welcome_to_read":"欢迎阅读本使用条款"
     },
     "index":{
-        "cross_platform_title":"兼容大部分discuz! 论坛",
-        "cross_platform_content":"使用DiscuzHub浏览绝大多数论坛，并且他们进行正常的交互活动 - 从发帖、文斗、私信到投票，正如你平常浏览一样",
+        "cross_platform_title":"支持大部分Discuz! 论坛",
+        "cross_platform_content":"使用Discuz Hub浏览绝大多数论坛，并且提供原生的服务 - 从发帖、文斗、私信到投票，纵享爽快。",
         "speed_and_performance_title":"速度与性（ji）能（qing）",
-        "speed_and_performance_content":"通过官方API以及服从绿色Android公约要求，仅仅6MB就能实现绝大多数的论坛交互。相对于正常网页浏览和交互，Discuz！有助于节省流量 \n DiscuzHub能让你有效的掌握可交互性。您可以通过各种方式实现对于网站的登录，并且免于密码存储致使的密码泄露",
+        "speed_and_performance_content":"使用官方API，仅仅6MB的大小，应用就能实现绝大多数的论坛交互。相对于正常网页浏览和交互，Discuz！有助于节省流量 \n DiscuzHub能让你有效的管理自己的隐私。您可以通过各种方式实现对于网站的登录，并且免于密码存储致使的密码泄露",
         "powerful_tool_title":"美妙的工具",
-        "powerful_tool_content":"通过各种各样的稳健的库，DiscuzHub能够优雅的实现绝大多数的论坛的交互。使用官方的API，能够使得您在使用应用访问各种各样的论坛时，都获得均一而稳定的服务，同时也有益于防止因Javascript错误执行而引发的CSRF和XSS风险。",
+        "powerful_tool_content":"遵循Google开发者指南，Discuz Hub能够优雅的实现绝大多数的论坛的交互。使用官方的移动API，能够使得您在使用应用访问各种各样的论坛时，都获得优雅而稳定的服务。得益于API调用而不是渲染HTML页面，因Javascript错误执行而引发的CSRF和XSS问题也不会发生。",
         "open_source_title":"开源软件",
         "open_source_content":"基于MIT开源协议授权，您可以自由地对DiscuzHub进行检查、修改以及重新发布。您可以按照您的需求对于DiscuzHub进行自由的探索。",
         "fork_on_github_title":"帮助我们！",

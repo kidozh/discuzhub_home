@@ -220,15 +220,6 @@ function HomePage() {
             <Link href="/compatibility-guide/"><FormattedMessage id="compatibility.compatibility_title" /></Link>
           </Heading>
         </Box>
-        <Box>
-          <Heading as="h3" sx={{
-            fontWeight: 400,
-            textAlign : "center",
-            wordWrap:"break-word"}}>
-            <Link href="/add-a-bbs-guide/"><FormattedMessage id="add_bbs.add_bbs_title" /></Link>
-          </Heading>
-
-        </Box>
 
       </Grid>
       <Grid columns={[1, '1fr 8fr 1fr', '1fr 6fr 1fr']}

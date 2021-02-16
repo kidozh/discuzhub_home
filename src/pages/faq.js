@@ -1,10 +1,10 @@
 import React from "react"
-import { IntlProvider, FormattedMessage, useIntl, injectIntl } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import DocLayout from "../components/doc-layout"
 import EN from "../components/faq_docs/en"
 import ZH from "../components/faq_docs/zh"
 import ZHHK from "../components/faq_docs/zh-hk"
-import {Box,jsx, Grid} from "theme-ui"
+import { Grid} from "theme-ui"
 // import BackToTop from "react-back-top"
 
 

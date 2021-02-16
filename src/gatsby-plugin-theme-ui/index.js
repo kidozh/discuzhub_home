@@ -1,5 +1,5 @@
-import prism from '@theme-ui/prism/presets/theme-ui'
-import { deep as DefaultTheme, tailwind } from "@theme-ui/presets"
+// import prism from '@theme-ui/prism/presets/theme-ui'
+import { deep as DefaultTheme } from "@theme-ui/presets"
 
 export default {
     ...DefaultTheme,

@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, Box, Grid, Image, Link, Alert, jsx, Message } from 'theme-ui'
+import { Card, Box, Grid, Image, Link, Alert, Message } from 'theme-ui'
 import quickStarImage from "../../../static/features/quick-star.svg"
 import telescopeImage from "../../../static/features/telescope.svg"
 import galaxyImage from "../../../static/features/galaxy.svg"

@@ -1,7 +1,5 @@
 /** @jsx jsx */
-import React from "react"
-import { Link } from "gatsby"
-import {css, Styled, jsx, Container} from "theme-ui"
+import { jsx, Container} from "theme-ui"
 import Header from "./header"
 import Footer from "./footer"
 import RootLayout from "./theme-ui-root-layout"

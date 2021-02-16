@@ -1,26 +1,28 @@
 /** @jsx jsx */
 import React from "react"
-import { Container, jsx, Styled, ThemeProvider, Heading, Link, Text } from "theme-ui"
+import { Container, jsx, Styled, Heading, Link, Text } from "theme-ui"
 import { useIntl } from "gatsby-plugin-intl"
 import Layout from "./layout"
 import { graphql, useStaticQuery } from "gatsby"
-import { toTheme, Typography } from "@theme-ui/typography"
-import TypographyTheme from "typography-theme-grand-view"
 import { MDXProvider } from "@theme-ui/mdx"
-
+import { ThemeProvider } from 'theme-ui'
+import Prism from '@theme-ui/prism'
+import theme from './prism-theme'
 
 
 
 
 const components = {
-  h1:Heading.h1,
-  h2:Heading.h2,
-  h3:Heading.h3,
-  h4:Heading.h4,
-  h5:Heading.h5,
-  h6:Heading.h6,
+  h1: Heading.h1,
+  h2: Heading.h2,
+  h3: Heading.h3,
+  h4: Heading.h4,
+  h5: Heading.h5,
+  h6: Heading.h6,
   p: Text,
-  a: Link
+  a: Link,
+  pre: ({ children }) => <>{children}</>,
+  code: Prism,
 
 
 }
@@ -44,44 +46,53 @@ export default ({ subject, children }) => {
   `)
 
   return (
-    <Layout title={subject}>
-      {/* title part*/}
-      <Container sx={{
-        bg: "primary",
-        p: 4
-      }}>
-        <Styled.h1 sx={{
-          color: "white",
-          textAlign: "center",
-          fontWeight: 600
+    <ThemeProvider
+      theme={theme}
+    >
+      <Layout title={subject}>
+        {/* title part*/}
+
+        <Container sx={{
+          bg: "primary",
+          p: 4
         }}>
-          {subject}
-        </Styled.h1>
-        <Styled.p sx={{
-          color: "white",
-          textAlign: "center"
+          <Styled.h1 sx={{
+            color: "white",
+            textAlign: "center",
+            fontWeight: 600
+          }}>
+            {subject}
+          </Styled.h1>
+          <Styled.p sx={{
+            color: "white",
+            textAlign: "center"
+          }}>
+            {data.site.siteMetadata.title}
+          </Styled.p>
+
+        </Container>
+        <Container as="article" sx={{
+          px: [2, 4, 6],
+          py: [2, 4, 6],
+          pt: [1, 2, 2],
+          pb: [1, 2, 2]
         }}>
-          {data.site.siteMetadata.title}
-        </Styled.p>
-
-      </Container>
-      <Container as="article" sx={{
-        px:[2,4,6],
-        py:[2,4,6],
-        pt:[1,2,2],
-        pb:[1,2,2]
-      }}>
-        <MDXProvider components={{
-          a: Link
-        }}>
-
-        </MDXProvider>
-        {children}
+          <MDXProvider components={{
+            a: Link,
+            pre: ({ children }) => <>{children}</>,
+            code: Prism,
+          }}>
+            {children}
+          </MDXProvider>
+          
 
 
 
-      </Container>
-    </Layout>
+        </Container>
+
+      </Layout>
+    </ThemeProvider>
+
   )
 }
 

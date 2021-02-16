@@ -1,7 +1,7 @@
 import React from "react"
 
 import DocLayout from "../components/doc-layout"
-import { Card, jsx, Box, Grid, Image, Link, Alert, Container } from 'theme-ui'
+import { Card, jsx, Box, Grid, Image, Link, Container } from 'theme-ui'
 
 
 import { Link as IntlLink, injectIntl } from "gatsby-plugin-intl"

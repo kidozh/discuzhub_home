@@ -1,10 +1,9 @@
 import React from "react"
-import { IntlProvider, FormattedMessage, useIntl, injectIntl } from 'react-intl';
+import {  useIntl } from 'react-intl';
 import DocLayout from "../components/doc-layout"
 import EN from "../../sections/compatibility_guide/en"
 import ZH from "../../sections/compatibility_guide/zh"
 import ZHHK from "../../sections/compatibility_guide/zh-hk"
-import { Box, jsx } from "theme-ui"
 
 const TermsPage = () => {
 

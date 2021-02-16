@@ -1,7 +1,5 @@
 import React from "react"
-import { Card, Box, Grid, Image, Link, Alert } from 'theme-ui'
-
-import { Link as IntlLink } from "gatsby-plugin-intl"
+import { Grid, Link } from 'theme-ui'
 
 import FAQCard from "../questionAndAnswerCard"
 

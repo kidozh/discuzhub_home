@@ -153,7 +153,8 @@
         "discuzHub_licence_description":"BLANK"
     },
     "customize":{
-        "customize_title":"構建專屬某個論壇的應用",
+        "customize_locally_title":"構建專屬某個論壇的應用",
+        "customize_github_title":"使用Github Action構建專屬應用",
         "compatibility_subtitle":"版主可以使用下面的设置以更好地使你的论坛展示在DiscuzHub上",
         "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
     },

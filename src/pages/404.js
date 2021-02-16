@@ -1,8 +1,8 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import { Card, jsx, Box, Grid, Image, Link, Alert, Heading } from 'theme-ui'
-import { Link as IntlLink,injectIntl } from "gatsby-plugin-intl"
+import {  Box, Grid, Heading } from 'theme-ui'
+import { injectIntl } from "gatsby-plugin-intl"
 
 class notFoundPage extends React.Component {
     constructor(props, intl) {

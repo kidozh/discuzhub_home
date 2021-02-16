@@ -152,7 +152,8 @@
         "discuzHub_licence_description":"DiscuzHub"
     },
     "customize":{
-        "customize_title":"Make the delicate app",
+        "customize_locally_title":"Build delicate app in local computer",
+        "customize_github_title":"Build delicate app with Github Action",
         "compatibility_subtitle":"版主可以使用下面的设置以更好地使你的论坛展示在DiscuzHub上",
         "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
     },

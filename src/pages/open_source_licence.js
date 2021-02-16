@@ -1,7 +1,7 @@
 import React from "react"
-import { IntlProvider, FormattedMessage, useIntl, injectIntl } from 'react-intl';
+import {  useIntl } from 'react-intl';
 import DocLayout from "../components/doc-layout"
-import { Box, jsx, Grid, Heading, Text, Badge } from "theme-ui"
+import { Box, Grid, Heading, Text, Badge } from "theme-ui"
 
 const OpenLibCard = ({ link, title, licence, children}) => (
   <Grid as="a"

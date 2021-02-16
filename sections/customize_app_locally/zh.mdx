@@ -1,0 +1,294 @@
+import { Alert, Message, jsx } from "theme-ui"
+
+# 前言
+
+我们收到部分论坛管理员的来信，希望我们能定制一款专属于他们论坛的应用。由于工作的繁忙以及安全问题，我们并未对此要求进行正面的答复。经过我们的测试和适配，我们很高兴的宣布在Discuz Hub 3.10版本后，我们支持了专属论坛的编译以及发布。
+
+# 使用许可
+
+您需要同意下列条款以分发专属于单一论坛的应用
+
++ [隐私政策](/privacy_policy)
++ [使用条款](/term_of_use)
+
+<Alert>我们理解到部分用户很少阅读条款，但是我们希望您浏览一次，以避免不必要的争端。</Alert>
+
+# 注意
+
+此教程将会帮助你在本地构建应用，您也可以使用Gitub Action构建本应用，详情请点击[使用GitHub action构建应用](/customize-bbs-in-github/)
+
+其对比的优劣在于:
+
+|     | 本地构建  |  Github action |
+|  ----  | ----  | ---- |
+| 灵活性  | 高，可以进行源代码修改 | 低 |
+| 安全性  | √√√ | √√√√ |
+| 更新方式 | Git merge或者下载源代码 | Git merge |
+| 构建速度 | 视电脑配置和网络情况而定，在内地可能预料到非常的缓慢 | 快，约4分钟左右 |
+| 额外费用 | 无 | 当超出Github时间限制时，可能会收取一定费用，相关情况请点击[Github Pricing](https://github.com/pricing) |
+| 需要Github账号 | 否 | 是 |
+
+# 举例说明
+
+在接下来的内容中，我们谨以QZZN论坛为例，向你阐述如何分发自己论坛的专属应用。
+
+QZZN论坛的网址是：[https://bbs.qzzn.com/](https://bbs.qzzn.com/)
+
+<Message>我们，DiscuzHub，与QZZN论坛之间并无任何联系。相关功能不为任何个人及组织担保。详细信息请检查我们的使用条款。</Message>
+
+# 技术要求
+
+你需要达到以下要求以完成对于专属应用的编译以及发布
+
++ 一台支持Android studio的计算机
++ [Android studio](https://developer.android.com/studio)（大陆地区可以使用Google.cn开发者网站下载[https://developer.android.google.cn/studio](https://developer.android.google.cn/studio)）
++ Git或者能够解压Zip压缩文件的软件
+
+<Message>当您处于中国大陆区域时，从Android studio官网上下载可能非常缓慢。您可以使用Google中国开发者网站下载以获得更好的速度。</Message>
+
+# 准备
+
+首先，你需要下载我们的Discuz Hub源代码。你可以使用：
+
++ git命令下载
++ 从Github上下载zip打包的源代码
+
+<Message>当您处于中国大陆区域时，使用Github下载可能非常缓慢。您可以使用代理服务以加速此过程。</Message>
+
+## 使用git命令
+
+打开您的终端（Windows用户使用Win徽标键+R，在弹出的运行对话框中键入cmd并选择确定）
+
+使用`cd`命令进入你想存放代码的文件夹
+
+### 使用HTTPS
+
+```bash
+git clone https://github.com/kidozh/DiscuzHub.git
+```
+
+### 使用SSH
+
+```bash
+git clone git@github.com:kidozh/DiscuzHub.git
+```
+
+### 使用Github CLI
+
+```bash
+gh repo clone kidozh/DiscuzHub
+```
+
+等待终端执行命令后，完成Discuz源码的下载
+
+### 直接下载源码
+
+使用浏览器打开我们的库：[https://github.com/kidozh/DiscuzHub](https://github.com/kidozh/DiscuzHub)，点击Code按钮，点击Download ZIP，等待下载完成。
+
+![使用Github下载源代码](/images/download_from_github.png)
+
+将下载的源代码（文件名可能是DiscuzHub-master.zip）解压到您存放源代码的文件夹
+
+这样你就完成了对于源代码的下载。接着你需要开始使用Android studio这个官方IDE编译此应用。
+
+# 使用并安装Android studio
+
+从[Android studio](https://developer.android.com/studio)（大陆地区[https://developer.android.google.cn/studio](https://developer.android.google.cn/studio)）安装好应用后，你可能需要设置或下载一系列的软件和插件以能够编译Android应用。
+
+我们的工程目前是支持Android 11版本的，请选择并下载此版本的SDK以完成编译。
+
+使用Android studio打开存放源代码的文件夹。
+
+# 自定义参数
+
+我们的使用条款明确表明，使用我们的服务并不意味着您可以使用我们的图标，同时您的衍生服务也不应当干扰我们的正常服务，因此，您必须修改下面的内容以满足协议：
+
+## 1. 修改应用名称
+
+请在AndroidManifest.xml（路径：`app\src\main\AndroidManifest.xml`）文件中，修改application目录下的android:label这个值为您论坛的名称。例如android:label="QZZN论坛"
+
+```xml{numberLines: 17}
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="QZZN论坛" // highlight-line
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Default"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+```
+
+### 国际化需求
+
+我们理解到部分论坛可能具有国际化任务的需求，那么请维持AndroidManifest.xml文件的android:label这个值，转而修改string.xml文件的app_name这个值。我们谨以**keylol.com**为例子。
+
+**keylol.com**中文名称为其乐，英文名称为keylol。
+
+在默认英文字符串文件（strings.xml，路径`app\src\main\res\values\strings.xml`）中修改app_name为keylol，在中文字符串文件（src\main\res\values-zh-rCN\strings.xml）中修改app_name值为其乐。
+
+```xml{numberLines: 17}
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name" // highlight-line
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Default"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+```
+
+<Alert>我们，DiscuzHub，与其乐论坛（keylol.com）之间并无任何联系。</Alert>
+
+## 2. 修改应用ID
+
+应用ID相当于应用的身份证，一个应用应当只有一个ID。当相同的ID安装时，将会发生覆盖的情况，并且会干扰应用的运行。根据我们的使用条款且为了您的分发便利，您不应当使用我们的应用ID而应当转而使用自己的ID。我们以QZZN为例，其论坛使用的域名为bbs.qzzn.com，那么根据Google开发者指南推荐，你可以使用**com.qzzn.bbs**为应用ID。
+
+在模块的Gradle文件中，修改android选项下的**defaultConfig**中的**applicationId**为 **"com.qzzn.bbs"** ，示例如下：
+
+```groovy{numberLines: 5}
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.qzzn.bbs" // highlight-line
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 31
+        versionName "3.10"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                discuz_title: "NOT_IMPLEMENTED",
+                discuz_base_url: "NOT_IMPLEMENTED",
+        ]
+    }
+    ...
+}
+```
+
+这样你就完成了applicationId的修改。
+
+## 修改构建类型的值
+
+在项目的gradle文件（相对路径：`app/build.gradle`）下，我们提供了不同的构建类型，其对应着不同的分发版本，有着不同的功能
+
++ **single**：这个就是专属论坛使用的构建类型，在分发时，您应当选择此构建类型构建自己的应用并分发
++ release: 这个是我们分发Discuz Hub应用时的构建源，其支持多个论坛同时使用，这个不应当用于构建专属论坛。
++ debug：调试内容，这个不应用于生产环境
++ qzzn：一个以qzzn论坛为例的构建类型
+
+请修改`single`下的**discuz_title**以及**discuz_base_url**两个值。
+
+```groovy{numberLines: 32}
+        single {
+            // fill your bbs id
+            manifestPlaceholders = [
+                    discuz_title: "论坛名称（如：西北工业大学三行四方）", // highlight-line
+                    discuz_base_url: "服务网址（如：https://bbs.example.com）", // highlight-line
+            ]
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".bbs" // highlight-line
+        }
+```
+
++ discuz_title是论坛的名称，其将会被显示与开始页面，最终存入数据库的名称将以API为准
++ discuz_base_url是论坛的网址，这个参数非常重要，有的论坛服务在域名上（如bbs.qzzn.com）,有的论坛则有一个路径（如一亩三分地: [www.1point3acres.com/bbs](https://www.1point3acres.com/bbs)），你应当非常注意此值。同时网址也需要给上协议（如HTTP和HTTPS）。我们的应用虽然支持跳转，但是当你的论坛支持HTTPS协议时，请不要使用HTTP协议。
++ applicationIdSuffix会在最终的applicationId添加一个 **.bbs** 的后缀，因此最终编译出的applicationId将会是**com.qzzn.bbs.bbs**
+
+这样就完成了应用的修改，接着就可以开始应用的构建了。
+
+## 更换图标
+
+根据我们的使用政策，您不应当使用我们的图标来分发您的应用。因此，您需要使用自己的图标。
+
+### 准备图标
+
+我们推荐您使用SVG位图或者PNG、JPG等像素图像作为应用图标，尺寸大小应当是一个正方形或者类正方形。
+
+|     | SVG  |  PNG、JPG |
+|  ----  | ----  | ---- |
+| 性质  | 位图 | 像素图 |
+| 分辨率  | 接近于无限，极好 | 较差 |
+| 兼容性 | 差，尤其是多图层、图形复杂时 | 好 |
+
+我们理解到部分应用商店（例如小米应用商店）要求图标是PNG格式，因此请根据您的分发渠道确定**图标格式**。
+
+### 使用Android Studio导入
+
+在项目框中任一地方点击右键，呼出对话框。如果是位图SVG文件，选择New -> Vector Asset，如果是PNG、JPG资源文件选择New -> Image Asset。
+
+![添加图形资源](/images/add_drawable.png)
+
+接下来选择你准备好的图片资源，选择好后，选择尺寸（建议100×100）
+
+![选择本地资源](/images/add_vector_assets.png)
+
+点击next完成
+
+### 从Manifest中更改图标
+
+请在AndroidManifest.xml（路径：`app\src\main\AndroidManifest.xml`）文件中，修改application目录下的android:icon这个值为您论坛的名称。如果是位图则是`@drawable/刚刚生成的名字`，如果是像素则是`@mipmap/刚刚生成的名字`
+
+```xml{numberLines: 17}
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo" // highlight-line
+        android:label="@string/app_name" 
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Default"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+```
+
+我们建议使用位图图像，如果你想省事的话，直接复制**PNG图片**，替换mipmap下的logo.png(路径：`/app/src/main/res/mipmap-xxxhdpi/logo.png`)文件即可
+
+
+# 构建应用
+
+和正常的Android程序一样，首先你需要使用gradle构建一下整个项目。在导航栏中选择**Build->Make Project**完成项目的构建。
+
+![Gradle构建项目](/images/gradle_build.png)
+
+<Alert>当您处于中国大陆区域时，使用Gradle编译Android应用可能非常缓慢甚至报错。您可以使用代理服务器以获得更好的速度。</Alert>
+
+# 生成应用
+
+在导航栏中选择Build->Generate Signed Bundle or APK，打开选中的框
+
+![生成应用](/images/build-dialog.png)
+
+选择你需要分发的应用类型，我们以分发APK为例，选择APK，点击Next。
+
+## 选择密钥库
+
+当你首次生成安装文件时，你需要创建一个密钥库（keystore）对安装包进行加密，并验证你的身份。如果你之前有密钥库，你可以选择Choose exisiting以选择密钥库。
+
+![选择密钥库](/images/generate_keystore.png)
+
+若你没有密钥库，请选择Create New以创建新的密钥库。
+
+![创造密钥库](/images/create_keystore.png)
+
+填上上面的信息后，相应路径下就会生成密钥库文件。
+
+<Alert>密钥非常重要，它是验证发布者身份的重要凭证，请小心保管并做好备份。每次您分发应用时，都需要使用到此密钥。当您使用不一样的密钥签发同一Id应用时，将导致无法安装的情况。</Alert>
+
+选择密钥库并填上密钥和密码，点击Next。
+
+### 选择构建类型
+
+请选择single，构建专属于您论坛的应用。建议同时选择上签名版本v1和v2。点击finish开始生成安装包apk。
+
+![生成安装包](/images/generate_signed_apk.png)
+
+等待生成完毕后，生成的APK文件就可以用于分发以及安装。
+
+这样，你就完成了应用的构建
+
+# 后语
+
+如若你有任何问题，你可以联系kidozh@gmail.com以获得帮助和支持。
+
+<Alert variant='accent'>请注意措辞和言行，开发者并未对此功能做出任何承诺和保证，同时开发者并不是你爹。若措辞不当或者发生消息滥用的情况，我们有权停止对你的服务和支持，并撤销使用和再分发许可。</Alert>

@@ -1,55 +1,17 @@
 /** @jsx jsx */
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import { Card, Box, Grid, Image, Link, Alert, Message, Text, Heading, Button, Container, Flex, jsx } from "theme-ui"
-import { FormattedMessage, Link as IntlLink, useIntl } from "gatsby-plugin-intl"
+import { Box, Grid, Image, Link, Text, Heading, Container, Flex, jsx } from "theme-ui"
+import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 
 import Bridge3D from "../../static/index/3d-bridges.svg"
-import Speed from "../../static/index/speed.svg"
 import SelectiveLaser from "../../static/index/selective-laser-sintering.svg"
 import Tech3D from "../../static/index/3d-technology.svg"
 import RocketEngine3D from "../../static/index/3d-rocket-engine.svg"
 import Github from "../../static/index/github-white.svg"
-import Logo from "../../static/logo.svg"
 
 import PlayBadgeZh from "../../static/play-store/google-play-badge_zh_CN.png"
 import PlayBadgeEn from "../../static/play-store/google-play-badge_en.png"
-
-class ButtonLink extends React.Component {
-
-  render() {
-    return (
-      <Link as="a"
-            sx={{
-              //bg: 'primary',
-              borderRadius: 4,
-              mb: 2,
-              alignContent: 'center'
-            }}
-            css={{
-
-            }}
-            href={this.props.href} ><Text
-        sx={{
-          ml: 4,
-          mr: 4,
-          color: 'white',
-          alignItems: 'center',
-          float: 'center',
-          wordBreak: "break-word",
-          mt: 2,
-          mb: 2,
-
-        }}
-        css={{
-          "word-break": "break-word",
-          cursor: "pointer",
-
-        }}>{this.props.children}</Text></Link>
-    )
-  }
-}
 
 class InfoCard extends React.Component {
 

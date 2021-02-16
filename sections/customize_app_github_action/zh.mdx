@@ -1,0 +1,320 @@
+import { Alert, Message, jsx } from "theme-ui"
+
+# 前言
+
+我们收到了部分开发者的[issue](https://github.com/kidozh/DiscuzHub/issues/13)，我们很高兴的宣布我们支持使用Github action构建专属应用，以方便论坛管理员更方便的跟踪应用开发，获取安全信息和补丁等信息。
+
+同样由于众所周知的原因，使用Github action意味着部分package不会受到网络的影响，快速的完成Gradle的构建。这也对于管理员开发更加容易。
+
+我们在此感谢[老周部落](https://github.com/laozhoubuluo)对于我们的建议。
+
+# 使用许可
+
+您需要同意下列条款以分发专属于单一论坛的应用
+
++ [隐私政策](/privacy_policy)
++ [使用条款](/term_of_use)
+
+<Alert>我们理解到部分用户很少阅读条款，但是我们希望您浏览一次，以避免不必要的争端。</Alert>
+
+# 注意
+
+此教程将会帮助你使用Github Action构建应用，您下载源代码后在本地构建应用，详情请点击[在本地构建应用](/customize-bbs/)
+
+其对比的优劣在于:
+
+|     | 本地构建  |  Github action |
+|  ----  | ----  | ---- |
+| 灵活性  | 高，可以进行源代码修改 | 低 |
+| 安全性  | √√√ | √√√√ |
+| 更新方式 | Git merge或者下载源代码 | Git merge |
+| 构建速度 | 视电脑配置和网络情况而定，在内地可能预料到非常的缓慢 | 快，约4分钟左右 |
+| 额外费用 | 无 | 当超出Github时间限制时，可能会收取一定费用，相关情况请点击[Github Pricing](https://github.com/pricing) |
+| 需要Github账号 | 否 | 是 |
+
+# 举例说明
+
+在接下来的内容中，我们谨以QZZN论坛为例，向你阐述如何分发自己论坛的专属应用。
+
+QZZN论坛的网址是：[https://bbs.qzzn.com/](https://bbs.qzzn.com/)
+
+<Message>我们，DiscuzHub，与QZZN论坛之间并无任何联系。相关功能不为任何个人及组织担保。详细信息请检查我们的使用条款。</Message>
+
+# 技术要求
+
+你需要达到以下要求以完成对于专属应用的编译以及发布
+
++ 一台计算机
++ 一个验证后的Github用户
++ Keytool及一些Android SDK
+
+<Message>当您处于中国内地区域时，访问Github可能存在不稳定的情况。</Message>
+
+# Fork我们的源代码
+
+首先，你需要Fork我们的源代码以作为构件库。
+
+请访问我们在Github上托管的代码库：[https://github.com/kidozh/DiscuzHub](https://github.com/kidozh/DiscuzHub)，点击**fork**
+
+![Fork代码](/images/fork_in_github.png)
+
+## 启用 Github action
+
+你也许没有使用过Github action，现在就可以启用以编译Github action
+
+![启用Github action](/images/enable_github_action_workflow.png)
+
+接下来，你需要设置keystore以编译并签名应用。
+
+# 生成keystore文件
+
+我们推荐使用Android Studio生成keystone文件，有图形化界面对于新手用户更加友好。
+
+## 使用Android Studio
+
+打开任意一个工程或者文件夹，在导航栏中选择Build->Generate Signed Bundle or APK，打开选中的框，请选择Create New以创建新的密钥库。
+
+![打开keystone的框](/images/build_and_generate_apk.png)
+
+在打开的对话框中选择任一选项均可，点击Next
+
+![创造密钥库](/images/generate_apk_dialog.png)
+
+点击**Create New**以创建新的keystore
+
+![创建一个新的keystore](/images/create_new_keystore.png)
+
+创造一个新的**keystore**，选择一个keystore保存路径后，并填上相关信息。
+
+![新密钥库](/images/new_keystore.png)
+
+这样密钥库就会生成在指定的目录下，相应路径下就会生成密钥库文件（**.jks结尾**）。
+
+
+## 使用keytool
+
+如果你觉得麻烦的话，你也可以使用`keytool`生成一个密钥库。
+
+请参考[利用keytool生成keystore文件](https://www.jianshu.com/p/14add4a02ed6)
+
+<Alert>密钥非常重要，它是验证发布者身份的重要凭证，请小心保管并做好备份。每次您分发应用时，都需要使用到此密钥。当您使用不一样的密钥签发同一Id应用时，将导致无法安装的情况。</Alert>
+
+# 配置Github secret信息
+
+由于keystore是一个隐秘的信息，其不应当暴漏，因此你需要使用Github secret向Github action传递keystore的相关信息。
+
+## 需要的参数
+
++ signingKeyBase64：签名的base64编码
++ alias：签名的别称
++ keyStorePassword：密钥库的密码（这应当是你生成密钥时的第一个密码）
++ keyPassword：密钥的密码（这应当是你生成密钥时的第二个密码）
+
+![keystore参数](/images/keystore_matching.png)
+
+### signingKeyBase64生成
+
+运行以下命令
+
+```bash
+cd 你的密钥库所在文件夹
+openssl base64 < 密钥库名称.jks | tr -d '\n' | tee some_signing_key.jks.base64.txt
+```
+
+打开`base64.txt`复制文本信息，获得签名的base64编码信息
+
+## 填入Github secret信息
+
+打开之前fork的库，点击`Settings`
+
+![Github库设置](/images/github_repo_settings.png)
+
+添加secret信息
+
+![Github secret](/images/add_repo_secret.png)
+
+一共需要输入四个信息，名称和值分别是
+
++ signingKeyBase64：base64.txt中的文本信息
++ alias：签名的别称
++ keyStorePassword：密钥库的密码（这应当是你生成密钥时的第一个密码）
++ keyPassword：密钥的密码（这应当是你生成密钥时的第二个密码）
+
+![Github add secret](/images/add_github_secret.png)
+
+输入完成后，我们就完成了签发设置。
+
+![Github密钥库](/images/github_secret.png)
+
+<Alert>此工程下的合作者（collaborator）们都能获得这些敏感信息。请谨慎添加合作者。</Alert>
+
+# 自定义参数
+
+我们的使用条款明确表明，使用我们的服务并不意味着您可以使用我们的图标，同时您的衍生服务也不应当干扰我们的正常服务，因此，您必须修改下面的内容以满足协议：
+
+您可以使用Github网页界面直接修改文件中的代码。
+
+## 1. 修改应用名称
+
+请在AndroidManifest.xml（路径：`app\src\main\AndroidManifest.xml`）文件中，修改application目录下的android:label这个值为您论坛的名称。例如android:label="QZZN论坛"
+
+```xml{numberLines: 17}
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="QZZN论坛" // highlight-line
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Default"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+```
+
+### 国际化需求
+
+我们理解到部分论坛可能具有国际化任务的需求，那么请维持AndroidManifest.xml文件的android:label这个值，转而修改string.xml文件的app_name这个值。我们谨以**keylol.com**为例子。
+
+**keylol.com**中文名称为其乐，英文名称为keylol。
+
+在默认英文字符串文件（strings.xml，路径`app\src\main\res\values\strings.xml`）中修改app_name为keylol，在中文字符串文件（src\main\res\values-zh-rCN\strings.xml）中修改app_name值为其乐。
+
+```xml{numberLines: 17}
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name" // highlight-line
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Default"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+```
+
+<Alert>我们，DiscuzHub，与其乐论坛（keylol.com）之间并无任何联系。</Alert>
+
+## 2. 修改应用ID
+
+应用ID相当于应用的身份证，一个应用应当只有一个ID。当相同的ID安装时，将会发生覆盖的情况，并且会干扰应用的运行。根据我们的使用条款且为了您的分发便利，您不应当使用我们的应用ID而应当转而使用自己的ID。我们以QZZN为例，其论坛使用的域名为bbs.qzzn.com，那么根据Google开发者指南推荐，你可以使用**com.qzzn.bbs**为应用ID。
+
+在模块的Gradle文件中，修改android选项下的**defaultConfig**中的**applicationId**为 **"com.qzzn.bbs"** ，示例如下：
+
+```groovy{numberLines: 5}
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.qzzn.bbs" // highlight-line
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 31
+        versionName "3.10"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                discuz_title: "NOT_IMPLEMENTED",
+                discuz_base_url: "NOT_IMPLEMENTED",
+        ]
+    }
+    ...
+}
+```
+
+这样你就完成了applicationId的修改。
+
+## 修改构建类型的值
+
+在项目的gradle文件（相对路径：`app/build.gradle`）下，我们提供了不同的构建类型，其对应着不同的分发版本，有着不同的功能
+
++ **single**：这个就是专属论坛使用的构建类型，在分发时，您应当选择此构建类型构建自己的应用并分发
++ release: 这个是我们分发Discuz Hub应用时的构建源，其支持多个论坛同时使用，这个不应当用于构建专属论坛。
++ debug：调试内容，这个不应用于生产环境
++ qzzn：一个以qzzn论坛为例的构建类型
+
+请修改`single`下的**discuz_title**以及**discuz_base_url**两个值。
+
+```groovy{numberLines: 32}
+        single {
+            // fill your bbs id
+            manifestPlaceholders = [
+                    discuz_title: "论坛名称（如：西北工业大学三行四方）", // highlight-line
+                    discuz_base_url: "服务网址（如：https://bbs.example.com）", // highlight-line
+            ]
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".bbs" // highlight-line
+        }
+```
+
++ discuz_title是论坛的名称，其将会被显示与开始页面，最终存入数据库的名称将以API为准
++ discuz_base_url是论坛的网址，这个参数非常重要，有的论坛服务在域名上（如bbs.qzzn.com）,有的论坛则有一个路径（如一亩三分地: [www.1point3acres.com/bbs](https://www.1point3acres.com/bbs)），你应当非常注意此值。同时网址也需要给上协议（如HTTP和HTTPS）。我们的应用虽然支持跳转，但是当你的论坛支持HTTPS协议时，请不要使用HTTP协议。
++ applicationIdSuffix会在最终的applicationId添加一个 **.bbs** 的后缀，因此最终编译出的applicationId将会是**com.qzzn.bbs.bbs**
+
+这样就完成了应用的修改，接着就可以开始应用的构建了。
+
+## 更换图标
+
+根据我们的使用政策，您不应当使用我们的图标来分发您的应用。因此，您需要使用自己的图标。
+
+### 准备图标
+
+我们推荐您使用SVG位图或者PNG、JPG等像素图像作为应用图标，尺寸大小应当是一个正方形或者类正方形。
+
+|     | SVG  |  PNG、JPG |
+|  ----  | ----  | ---- |
+| 性质  | 位图 | 像素图 |
+| 分辨率  | 接近于无限，极好 | 较差 |
+| 兼容性 | 差，尤其是多图层、图形复杂时 | 好 |
+
+我们理解到部分应用商店（例如小米应用商店）要求图标是PNG格式，因此请根据您的分发渠道确定**图标格式**。
+
+### 使用Android Studio导入
+
+在项目框中任一地方点击右键，呼出对话框。如果是位图SVG文件，选择New -> Vector Asset，如果是PNG、JPG资源文件选择New -> Image Asset。
+
+![添加图形资源](/images/add_drawable.png)
+
+接下来选择你准备好的图片资源，选择好后，选择尺寸（建议100×100）
+
+![选择本地资源](/images/add_vector_assets.png)
+
+点击next完成
+
+### 从Manifest中更改图标
+
+请在AndroidManifest.xml（路径：`app\src\main\AndroidManifest.xml`）文件中，修改application目录下的android:icon这个值为您论坛的名称。如果是位图则是`@drawable/刚刚生成的名字`，如果是像素则是`@mipmap/刚刚生成的名字`
+
+```xml{numberLines: 17}
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo" // highlight-line
+        android:label="@string/app_name" 
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Default"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+```
+
+我们建议使用位图图像，如果你想省事的话，直接复制**PNG图片**，替换mipmap下的logo.png(路径：`/app/src/main/res/mipmap-xxxhdpi/logo.png`)文件即可
+
+# 开始编译apk
+
+转到GitHub action，选择Build Single apk，点击Run workflow以运行Github action编译apk
+
+![运行workflow](/images/run_workflow.png)
+
+等到运行完毕后，点击此workflow，点击artifacts下载压缩文件
+
+![查看编译出的apk](/images/github_action_app.png)
+
+解压此文件，你就可以获得由Github action编译出的APK了
+
+恭喜，此apk就是您论坛专属的了。
+
+# 如何随源代码更新？
+
+使用Pull request即可
+
+# 后语
+
+如若你有任何问题，你可以联系kidozh@gmail.com以获得帮助和支持。
+
+<Alert variant='accent'>请注意措辞和言行，开发者并未对此功能做出任何承诺和保证，同时开发者并不是你爹。若措辞不当或者发生消息滥用的情况，我们有权停止对你的服务和支持，并撤销使用和再分发许可。</Alert>

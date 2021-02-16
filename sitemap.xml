@@ -124,13 +124,13 @@
 <url> <loc>https://discuzhub.kidozh.com/zh/dev-blog/dev-blog-opened/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh-hk/dev-blog/dev-blog-opened/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/customize_your_app/zh/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://discuzhub.kidozh.com/en/customize_your_app/zh/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh/customize_your_app/zh/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://discuzhub.kidozh.com/zh-hk/customize_your_app/zh/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/term_of_services/en/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/en/customize_your_app/zh/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/en/term_of_services/en/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://discuzhub.kidozh.com/term_of_services/zh-hk/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/zh-hk/customize_your_app/zh/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh/term_of_services/en/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/term_of_services/zh-hk/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/en/term_of_services/zh-hk/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh-hk/term_of_services/en/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh/term_of_services/zh-hk/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -150,6 +150,10 @@
 <url> <loc>https://discuzhub.kidozh.com/en/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh-hk/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/customize-bbs-in-github/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/en/customize-bbs-in-github/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/zh/customize-bbs-in-github/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://discuzhub.kidozh.com/zh-hk/customize-bbs-in-github/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/customize-bbs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/en/customize-bbs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://discuzhub.kidozh.com/zh/customize-bbs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>

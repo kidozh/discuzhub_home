@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{VDbO:function(c,t,a){"use strict";a.r(t);a("q1tI");var e=a("52Oh"),l=a("FwpG"),n=a("KHkp"),i=a("aMMl"),o=a("1nno"),b=a("qKvR");t.default=function(){var c=Object(e.a)();return Object(b.c)(l.a,{sx:{mb:6},subject:c.formatMessage({id:"compatibility.compatibility_title"})},"en"===c.locale&&Object(b.c)(n.a,null),"zh"===c.locale&&Object(b.c)(i.a,null),"zh-hk"===c.locale&&Object(b.c)(o.a,null))}}}]);
+//# sourceMappingURL=component---src-pages-upgrade-api-guide-js-dd6f4eb1272616e62397.js.map

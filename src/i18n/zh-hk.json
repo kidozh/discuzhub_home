@@ -162,5 +162,22 @@
         "add_bbs_title":"用户添加论坛指引",
         "compatibility_subtitle":"版主可以使用下面的设置以更好地使你的论坛展示在DiscuzHub上",
         "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
+    },
+    "nightly_version":{
+        "nightly":"Discuz Hub Nightly",
+        "nightly_title":"品嚐新鮮出爐的Discuz Hub。",
+        "nightly_subtitle":"先行體驗即將上架的Android版應用。",
+        "nightly_build_title":"使用Github action構建",
+        "nightly_build_description":"與源代碼保持實時更新，搶先體驗我們的下一代版本，與我們一起把它打造得盡善盡美。嘗試：Discuz Hub Nightly",
+        "nightly_policy":"此應用仍然遵循",
+        "and":"和",
+        "nightly_build_annotation":"Nightly 版本是不穩定的測試和開發平台。每當我們更新位於Github上的代碼庫時，Github action就會自動編譯並生成相對應的安裝包文件。",
+        "get_from_github":"從Github action獲得",
+        "report_bug_title":"發現功能異常？請報告給我們。",
+        "report_bug_description":"你可以通過郵件和發issue的方式聯繫我們，提前表示謝意。",
+        "report_bug_in_issue":"在Github上提交issue討論（推薦）",
+        "report_bug_via_email":"向開發者發送郵件",
+        "compatibility_subtitle":"版主可以使用下面的設置以更好地使你的論壇展示在DiscuzHub上",
+        "discuzHub_licence_description":"DiscuzHub以MIT協議開源"
     }
 }

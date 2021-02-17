@@ -161,6 +161,23 @@
         "add_bbs_title":"Guide for users to add a BBS",
         "compatibility_subtitle":"版主可以使用下面的设置以更好地使你的论坛展示在DiscuzHub上",
         "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
+    },
+    "nightly_version":{
+        "nightly":"Discuz Hub Nightly",
+        "nightly_title":"Take a Discuz Hub on the wild side.",
+        "nightly_subtitle":"Be among the first to explore future releases of Discuz Hub for Android.",
+        "nightly_build_title":"Build with Github action",
+        "nightly_build_description":"Get a sneak peek at our next generation Discuz Hub, and help us make it the best helper it can be: try Discuz Hub Nightly.",
+        "nightly_policy":"The app adheres to",
+        "and":"and",
+        "nightly_build_annotation":"Nightly is an unstable testing and development platform. Every time the source code is updated, the apk is automatically generated.",
+        "get_from_github":"Get it",
+        "report_bug_title":"See something that isn’t working? Let us know.",
+        "report_bug_description":"You can report it to us by issue and email.",
+        "report_bug_in_issue":"Launch an issue in github (recommended)",
+        "report_bug_via_email":"Email the developer",
+        "compatibility_subtitle":"版主可以使用下面的设置以更好地使你的论坛展示在DiscuzHub上",
+        "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
     }
     
 }

@@ -1,0 +1,301 @@
+import { Alert, Message, jsx } from "theme-ui"
+
+# To begin
+
+We heard some advice from bbs administrator that they want an exclusive app for their own bbs. 
+Due to busy work and safety issues, we did not respond positively to this request. 
+After our testing, we are very pleased to announce that after Discuz Hub 3.10 version, we support the compilation and release of the app for exclusive bbs.
+
+# Agreements
+
+You need to agree to the following terms to distribute app delicate to exclusive bbs:
+
+
++ [Privacy policy](/privacy_policy)
++ [Term of use](/term_of_use)
+
+<Alert>We understand that some users rarely read the terms, but we do hope that you browse them once to avoid unnecessary disputes.</Alert>
+
+# Attention
+
+This page will guide you build the app locally and you can also build with github action in [build with github action](/customize-bbs-in-github/)
+
+The comparsion is listed in the following table:
+
+|     | Build locally  |  Github action |
+|  ----  | ----  | ---- |
+| Flexibility  | High(you can compile and change in your way) | Low |
+| Security  | √√√ | √√√√ |
+| Source update | Git merge or download source from repository | Git merge |
+| Build speed | Depending on network and hardware configuration | Around 4 minutes |
+| Extra fee | None | If using time exceeds limits, github may charge you following [Github Pricing](https://github.com/pricing). |
+| Github account required | No | Yes |
+
+# Take an example
+
+In the following guide, we take QZZN BBS as an example to illustrate how to distribute your exclusive app.
+
+The website of QZZN BBS is [https://bbs.qzzn.com/](https://bbs.qzzn.com/)
+
+<Message>We, DiscuzHub, have no connection with the QZZN forum. Related functions are not guaranteed by any individual or organization. Please check our terms of use for details.</Message>
+
+# Technical requiremnents
+
+You need to meet these needs to compile and release your exclusive app:
+
++ A PC able to run Android studio
++ [Android studio](https://developer.android.com/studio)
++ Git
++ Software to decompress ZIP file
+
+
+# To get ready
+
+At the begining, you must download the source code. You can use git and directly download zip files.
+
+
+## Using Git
+
+Open your terminal (Press `Win+R` if you are using Windows, enter `CMD` then Enter)
+
+You may need to use 'cd' command to enter the directory which store source code of Discuz Hub.
+
+### Using HTTPS
+
+```bash
+git clone https://github.com/kidozh/DiscuzHub.git
+```
+
+### Using SSH
+
+```bash
+git clone git@github.com:kidozh/DiscuzHub.git
+```
+
+### Using Github CLI
+
+```bash
+gh repo clone kidozh/DiscuzHub
+```
+
+Wait until command is executed and source code is finally retrieved.
+
+
+### Download source code in repository
+
+Open the link by a broswer：[https://github.com/kidozh/DiscuzHub](https://github.com/kidozh/DiscuzHub).Click `Code` and Download `ZIP` bottom，and the download will start.
+
+![Download source code from github](/images/download_from_github.png)
+
+Decompress downloaded file (file name may be `DiscuzHub-master.zip`), and you will get the source code. 
+
+Then you will compile the application with Android Studio.
+
+# Install and use Android studio
+
+Download and install software from [Android studio](https://developer.android.com/studio)，then configure and install a series of plugin and other software to compile an application.
+
+Our app is compatible with Android 11 and use the corresponding SDK to compile successfully.
+
+Open the repository by Android Studio.
+
+# Reconfigure paramters
+
+In our terms of use, using our Services does not mean you can use our logo and your redistribution Services shall not intefere with our Services. 
+Therefore, you should modify those contents to meet the agreements:
+
+## 1. Modify application name
+
+In AndroidManifest.xml（path：`app\src\main\AndroidManifest.xml`）, modify `android:label` under application category. In the example, the value should be android:label="QZZN"
+
+```xml{numberLines: 17}
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="QZZN" // highlight-line
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Default"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+```
+
+### International purpose
+
+We understand some forums may have needs to provide multi-languages contents. In this case, keep the `android:label` as it is and modify `app_name` in `string.xml`
+
+In a forum named Keylol, there is an Chinese name called "其乐".
+
+<Alert>We, DiscuzHub, has no relationship with keylol.</Alert>
+
+In default string file(strings.xml and the path is `app\src\main\res\values\strings.xml`), change `app_name` to Keylol.
+In Chinese string file(src\main\res\values-zh-rCN\strings.xml), the value shall be 其乐.
+
+```xml{numberLines: 17}
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name" // highlight-line
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Default"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+```
+
+
+
+## 2. Modify application ID
+
+ID is unique to every application. The different application with the same ID will override other app's data and make critical inteference with the other one.
+Complying with our terms and for your convenience, you should use your own application id. Take QZZN(bbs.qzzn.com) as an example. According to the guidance of android developer, the application ID shall be **com.qzzn.bbs**.
+
+In app's gradle file, modify **applicationId** in **defaultConfig** under android option to **"com.qzzn.bbs"**. An example is given below:
+
+```groovy{numberLines: 5}
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.qzzn.bbs" // highlight-line
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 31
+        versionName "3.10"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                discuz_title: "NOT_IMPLEMENTED",
+                discuz_base_url: "NOT_IMPLEMENTED",
+        ]
+    }
+    ...
+}
+```
+
+You will then modify application ID successfully.
+
+## Modify build type
+
+In project's gradle file, you shall see the build types we provide:
+
++ **single**：This is the exclusive build type and you should choose 
++ release: This type is the common app supporting multiple discuz site
++ debug： Debug app should not be used in production environment
++ qzzn： A QZZN example
+
+Please modify **discuz_title** and **discuz_base_url** under `single` build type.
+
+```groovy{numberLines: 32}
+        single {
+            // fill your bbs id
+            manifestPlaceholders = [
+                    discuz_title: "论坛名称（如：西北工业大学三行四方）", // highlight-line
+                    discuz_base_url: "服务网址（如：https://bbs.example.com）", // highlight-line
+            ]
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".bbs" // highlight-line
+        }
+```
+
++ discuz_title is the site name you provide. But the final name saved in device should be provided by mobile API.
++ discuz_base_url is the url bbs serve. This parameter is vital. Most forums run directly on their domain, such as QZZN(bbs.qzzn.com). However, a sort of them, for example 1Points3Acres, have a path (https://www.1point3acres.com/bbs). You should carefully take a look on it. Besides, the protocol is important and use HTTPS if the server can. Although our app support URL redirect, HTTP protocol is still vulnerable to network attack or hijack.
++ applicationIdSuffix will add a suffix value. In this case, the final ID will be **com.qzzn.bbs.bbs**.
+
+Next, you should modify logo.
+
+
+## Change the icon
+
+You shall use your own logo to comply with our terms and help build your copyright.
+
+### Prepare
+
+We recommend you to use SVG, PNG and JPG to show your app and the size is suggested to be a square.
+
+|     | SVG  |  PNG、JPG |
+|  ----  | ----  | ---- |
+| Property  | Vector illustration | Bitmap |
+| Resoultion  | Perfect | Good |
+| Compatibility | Can be bad when layers is overly much | Good |
+
+### Directly replace the file
+
+The quickest way is to replace the PNG file(path：`/app/src/main/res/mipmap-xxxhdpi/logo.png`).
+
+### Import from Android studio
+
+Right click at project view and the dialog will be triggered. Select New -> Vector Asset for Vector and New -> Image Asset for bitmap.
+
+![Add image resource](/images/add_drawable.png)
+
+Select your picture and give the size(100×100 suggested).
+
+
+![Choose local resource](/images/add_vector_assets.png)
+
+Press next
+
+### Change icon in Manifest
+
+In file AndroidManifest.xml(path：`app\src\main\AndroidManifest.xml`), modify android:icon under application category. The value should be `@drawable/resource_name` for vector and `@mipmap/刚刚生成的名字` for bitmap.
+
+
+```xml{numberLines: 17}
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo" // highlight-line
+        android:label="@string/app_name" 
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Default"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+```
+
+
+# Build application
+
+Select **Build->Make Project** to build the project with gradle like a normal Android application.
+
+
+![Build project with gradle](/images/gradle_build.png)
+
+
+# Generate application
+
+Select Build->Generate Signed Bundle or APK and the dialog is opened:
+
+![Generate application](/images/build-dialog.png)
+
+Select the build type
+
+## Using keystore
+
+You always need to use a keystore to sign the application. If you have one, you can use it by clicking "Choose exsiting".
+
+![Choose keystore](/images/generate_keystore.png)
+
+If you don't have one, create a new one by clicking "Create New".
+
+![Create keystore](/images/create_keystore.png)
+
+The keystore will be generated after all the information is filled.
+
+<Alert>Keystore is very important and the token to verify developer. Everytime you distribute application, you should use it. When different keystore is provided, the app may not work.</Alert>
+
+Select it and fill the passwords, press next.
+
+### Select build type
+
+Select single to build exclusive app and check v1 and v2. Press finish to generate installation file
+
+
+![Generate apk](/images/generate_signed_apk.png)
+
+After installation file is generated, it is ready to distribute.
+
+After that you will finally build your app.
+
+# Support
+
+If you have any questions, feel free to contact us for technical support.

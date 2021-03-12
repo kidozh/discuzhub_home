@@ -179,5 +179,15 @@
         "report_bug_via_email":"向開發者發送郵件",
         "compatibility_subtitle":"版主可以使用下面的設置以更好地使你的論壇展示在DiscuzHub上",
         "discuzHub_licence_description":"DiscuzHub以MIT協議開源"
+    },
+    "sponsor":{
+        "sponsor":"赞助我们",
+        "nightly":"Discuz Hub 日更版",
+        "sponsor_title":"赞助 Discuz Hub 的研发",
+        "sponsor_description":"Discuz Hub 是采用 MIT 许可的开源项目，使用完全免费。 但是随着项目规模的增长，也需要有相应的资金支持才能持续项目的维护的开发。你可以通过下列的方法来赞助 Discuz Hub 的开发。",
+        "alipay_title":"使用支付宝或者微信扫描二维码",
+        "alipay_subtitle":"非常感谢您的赞助。(目前谢绝来自台湾地区的赞助，非常感谢！)",
+        
+        "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
     }
 }

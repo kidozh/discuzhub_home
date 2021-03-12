@@ -61,8 +61,8 @@ const Header = () => {
             }}>{site.siteMetadata.title}</IntlLink>
           </Box>
           <Box >
-            <Grid columns={[1,5,5]} as="nav" sx={{
-              alignContent:["left","center","center"],
+            <Grid columns={[1,6,6]} as="nav" sx={{
+              alignContent:["left","right","right"],
               textAlign:["left","center","center"],
               justifyContent:"right"
             }}>
@@ -86,6 +86,13 @@ const Header = () => {
                           p: 2,
                         }}>
                 <FormattedMessage id="nav.faq" />
+              </IntlLink>
+              <IntlLink as={NavLink} to='/sponsor-us/'
+                        sx={{
+                          variant: 'styles.navlink',
+                          p: 2,
+                        }}>
+                <FormattedMessage id="sponsor.sponsor" />
               </IntlLink>
               <IntlLink as={NavLink} to='/contact'
                         sx={{

@@ -178,6 +178,15 @@
         "report_bug_via_email":"Email the developer",
         "compatibility_subtitle":"版主可以使用下面的设置以更好地使你的论坛展示在DiscuzHub上",
         "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
+    },
+    "sponsor":{
+        "sponsor":"Sponsor",
+        "sponsor_title":"Sponsor Discuz Hub",
+        "sponsor_description":"Discuz Hub is an open-source software licensed with MIT. It needs sponsoring when the whole project expands. You can sponsor us by the following link.",
+        "alipay_title":"Scan the QR code to sponsor us",
+        "alipay_subtitle":"Thanks a lot in advance for your sponsor.",
+        
+        "discuzHub_licence_description":"DiscuzHub以MIT协议开源"
     }
     
 }

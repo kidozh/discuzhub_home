@@ -34,7 +34,7 @@ export default ({ children }) => (
         </FAQCard>
 
         <FAQCard subject="How to donate the developer?">
-            <p>We currently do not consider receive any fund. If you are interested in our work, you can donate to some credible charity.</p>
+            <p>You can sponsor us via wechat or alipay in <a href="/sponsor-us/">Sponsor us</a>.</p>
         </FAQCard>
 
 

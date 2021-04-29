@@ -25,4 +25,6 @@ excerpt: 我们发布了4.8版本的DiscuzHub
 + 一些UI的顺序变更
 + 其他BUG优化
 
+
+
 其他历史更新，请参考[Google play上我们的应用说明](https://play.google.com/store/apps/details?id=com.kidozh.discuzhub)

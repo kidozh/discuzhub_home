@@ -10,7 +10,9 @@
         "project_at_github": "DiscuzHub@Github",
         "lightweight":"Lightweight",
         "discuz_app":"Discuz! Android App",
-        "administrator_note":"You may use this link to make your bbs compatible with us!👉"
+        "disfly":"Provided by DisFly",
+        "administrator_note":"You may use this link to make your bbs compatible with us!👉",
+        "disfly_provider":"Provided by DisFly"
     },
     "feature": {
         "features": "Features",

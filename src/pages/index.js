@@ -10,8 +10,12 @@ import Tech3D from "../../static/index/3d-technology.svg"
 import RocketEngine3D from "../../static/index/3d-rocket-engine.svg"
 import Github from "../../static/index/github-white.svg"
 
-import PlayBadgeZh from "../../static/play-store/google-play-badge_zh_CN.png"
-import PlayBadgeEn from "../../static/play-store/google-play-badge_en.png"
+import PlayBadgeZh from "../../static/play-store/Google_Play_Store_badge_ZH.svg"
+import PlayBadgeEn from "../../static/play-store/Google_Play_Store_badge_EN.svg"
+
+import AppStoreBadgeEn from "../../static/app-store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+import AppStoreBadgeZh from "../../static/app-store/CN(SC)/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_CNSC_RGB_blk_092917.svg"
+import AppStoreBadgeZhHK from "../../static/app-store/HKTW(TC)/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_CNTC_RGB_blk_100217.svg"
 
 class InfoCard extends React.Component {
 
@@ -91,19 +95,45 @@ function ShowPlayStoreBadge({intl}) {
   if(intl.locale === "zh"){
     return (
       <Image src={PlayBadgeZh} alt={"Play store"} sx={{
-        width:200
+        height:70,
+        verticalAlign:"middle"
       }} />
     )
   }else {
     return (
       <Image src={PlayBadgeEn} alt={"Play store"} sx={{
-        width:200
+        height:70,
+        verticalAlign:"middle"
       }}/>
     )
   }
+}
 
-
-
+function ShowAppStoreBadge({intl}) {
+  if(intl.locale === "zh"){
+    return (
+      <Image src={AppStoreBadgeZh} alt={"App Store"} sx={{
+        height:70,
+        verticalAlign:"middle"
+      }} />
+    )
+  }
+  else if(intl.locale === "zh-hk"){
+    return (
+      <Image src={AppStoreBadgeZhHK} alt={"App Store"} sx={{
+        height:70,
+        verticalAlign:"middle"
+      }} />
+    )
+  }
+  else {
+    return (
+      <Image src={AppStoreBadgeEn} alt={"App Store"} sx={{
+        height:70,
+        verticalAlign:"middle"
+      }}/>
+    )
+  }
 }
 
 function HomePage() {
@@ -129,20 +159,38 @@ function HomePage() {
           fontSize: 30,
           fontWeight: 200
         }}><FormattedMessage id="intro.lightweight" /> <FormattedMessage id="intro.discuz_app" /></Text>
-        <Grid columns={[1,3,3]} sx={{
+        <Grid columns={[1,4,4]} sx={{
           pl:[1,2,4],
           pr:[1,2,4],
           mt:4,
           mb:4,
         }}>
           <Box sx={{
-            textAlign: ["center", "right", "right"]
+            textAlign: ["center", "center", "center"]
+          }}>
+            <Link
+              href="https://apps.apple.com/us/app/%E8%B0%88%E5%9D%9B/id1601703772"
+              >
+
+              <ShowAppStoreBadge intl={intl} />
+              <br/>
+              <Text as="small" sx={{
+                color: "rgb(255,255,255)",
+                textAlign:"center"
+              }}>
+                {intl.formatMessage({"id":"intro.disfly"})}
+              </Text>
+            </Link>
+          </Box>
+          <Box sx={{
+            textAlign: ["center", "center", "center"]
           }}>
             <Link
               href="https://play.google.com/store/apps/details?id=com.kidozh.discuzhub"
               >
 
               <ShowPlayStoreBadge intl={intl} />
+              
             </Link>
           </Box>
           <Box sx={{

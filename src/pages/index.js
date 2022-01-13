@@ -16,6 +16,7 @@ import PlayBadgeEn from "../../static/play-store/Google_Play_Store_badge_EN.svg"
 import AppStoreBadgeEn from "../../static/app-store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
 import AppStoreBadgeZh from "../../static/app-store/CN(SC)/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_CNSC_RGB_blk_092917.svg"
 import AppStoreBadgeZhHK from "../../static/app-store/HKTW(TC)/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_CNTC_RGB_blk_100217.svg"
+import AppGallery from "../../static/app-gallery/AppGalleryBadge.svg"
 
 class InfoCard extends React.Component {
 
@@ -174,13 +175,23 @@ function HomePage() {
 
               <ShowAppStoreBadge intl={intl} />
               <br/>
-              <Text as="small" sx={{
+              
+            </Link>
+            <br/>
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.kidozh.discuz_flutter"
+              >
+
+              <ShowPlayStoreBadge intl={intl} />
+              
+            </Link>
+            <br/>
+            <Text as="small" sx={{
                 color: "rgb(255,255,255)",
                 textAlign:"center"
               }}>
                 {intl.formatMessage({"id":"intro.disfly"})}
               </Text>
-            </Link>
           </Box>
           <Box sx={{
             textAlign: ["center", "center", "center"]
@@ -190,6 +201,15 @@ function HomePage() {
               >
 
               <ShowPlayStoreBadge intl={intl} />
+              
+            </Link>
+            <br/>
+            <br/>
+            <Link
+              href="https://appgallery.cloud.huawei.com/ag/n/app/C105331315?channelId=Discuz+Hub+download+from+AppGallery&id=0ab329e643f64442b5540de9ace56780&s=C59880EBA1C60199ECC0A77459C35B87EF8D82F96F2623D568F704EC21C757AD&detailType=0&v=&callType=AGDLINK&installType=0000"
+              >
+
+              <Image src={AppGallery} width={236} />
               
             </Link>
           </Box>

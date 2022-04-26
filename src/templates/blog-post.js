@@ -51,14 +51,21 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 {post.frontmatter.excerpt}
               </Heading>
             </Box>
-            <Box sx={{
-              mt:2
-            }}>
-              <BlogCover sx={{
-                pt:[0,2,4],
+            <Grid columns={[1,'1fr 12fr 1fr','1fr 3fr 1fr']}>
+              <Box></Box>
+              <Box sx={{
+              mt:2,
 
-              }} coverName={post.frontmatter.cover} alt={post.frontmatter.cover} roundRadius={true} />
-            </Box>
+              }}>
+                <BlogCover sx={{
+                  pt:[0,2,4],
+                
+
+                }} coverName={post.frontmatter.cover} alt={post.frontmatter.cover} roundRadius={true} />
+              </Box>
+              <Box></Box>
+            </Grid>
+            
 
           </Grid>
           <Grid columns={[1,'1fr 2fr','1fr 2fr']}

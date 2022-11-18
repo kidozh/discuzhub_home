@@ -1,10 +1,13 @@
 /** @jsx jsx */
 import React from "react"
-import { Container, jsx, Styled, Heading, Link, Text } from "theme-ui"
+import {Themed} from "@theme-ui/mdx"
+import { Container, jsx, Heading, Link, Text } from "theme-ui"
 import { useIntl } from "gatsby-plugin-intl"
 import Layout from "./layout"
 import { graphql, useStaticQuery } from "gatsby"
-import { MDXProvider } from "@theme-ui/mdx"
+import {
+  MDXProvider,
+} from '@mdx-js/react'
 import { ThemeProvider } from 'theme-ui'
 import Prism from '@theme-ui/prism'
 import theme from './prism-theme'
@@ -56,19 +59,19 @@ export default ({ subject, children }) => {
           bg: "primary",
           p: 4
         }}>
-          <Styled.h1 sx={{
+          <Themed.h1 sx={{
             color: "white",
             textAlign: "center",
             fontWeight: 600
           }}>
             {subject}
-          </Styled.h1>
-          <Styled.p sx={{
+          </Themed.h1>
+          <Themed.p sx={{
             color: "white",
             textAlign: "center"
           }}>
             {data.site.siteMetadata.title}
-          </Styled.p>
+          </Themed.p>
 
         </Container>
         <Container as="article" sx={{

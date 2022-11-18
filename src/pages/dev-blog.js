@@ -1,13 +1,14 @@
 /** @jsx jsx */
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { Box, Card, Container, Grid, Image, jsx, Styled, Heading } from "theme-ui"
+import {Themed} from "@theme-ui/mdx"
+import { Box, Card, Container, Grid, Image, jsx, Heading } from "theme-ui"
 import { Link as IntlLink, useIntl } from "gatsby-plugin-intl"
 import BlogCover from "../components/blog-cover"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-solid-svg-icons'
 
-export default ({ data }) => {
+const Blog = ({ data }) => {
   const intl = useIntl()
   console.log(data)
 
@@ -18,26 +19,26 @@ export default ({ data }) => {
         bg: "gray",
         p: 4
       }}>
-        <Styled.h1 sx={{
+        <Themed.h1 sx={{
           color: "white",
           textAlign: "center",
           fontWeight: 600
         }}>
           {intl.formatMessage({ id: "blog.blog" })}
-        </Styled.h1>
-        <Styled.p sx={{
+        </Themed.h1>
+        <Themed.p sx={{
           color: "white",
           textAlign: "center"
         }}>
           {intl.formatMessage({ id: "blog.blog_annotation" })}
-        </Styled.p>
-        <Styled.p sx={{
+        </Themed.p>
+        <Themed.p sx={{
           mt: 1,
           color: "white",
           textAlign: "center"
         }}>
           {intl.formatMessage({id:"blog.allPostCounts"},{posts:data.allMarkdownRemark.totalCount})  }
-        </Styled.p>
+        </Themed.p>
       </Container>
       <Container px={[1, 2, 4]} py={[1, 2, 4]}>
         <Grid gap={1}
@@ -79,9 +80,9 @@ export default ({ data }) => {
                         {node.frontmatter.title}
                       </IntlLink>
                     </Heading>
-                    <Styled.p sx={{
+                    <Themed.p sx={{
                       color:"gray"
-                    }}>{node.excerpt}</Styled.p>
+                    }}>{node.excerpt}</Themed.p>
                   </Box>
                 </Grid>
               </Card>
@@ -95,7 +96,7 @@ export default ({ data }) => {
 }
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+    allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
       totalCount
       edges {
         node {
@@ -117,3 +118,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Blog;

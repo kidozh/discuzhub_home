@@ -1,6 +1,5 @@
 import React from "react"
 import { IntlProvider, FormattedMessage, useIntl, injectIntl } from 'react-intl';
-import Layout from "../components/layout"
 import EN from "../../sections/privacy_policy/en"
 import ZH from "../../sections/privacy_policy/zh"
 import ZHHK from "../../sections/privacy_policy/zh-hk"

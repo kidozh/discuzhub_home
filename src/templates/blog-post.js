@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import {Styled, jsx, Divider, Container, Box,  Grid, Heading, Avatar, Text, Badge} from 'theme-ui'
+import {Themed} from "@theme-ui/mdx"
+import {jsx, Divider, Container, Box,  Grid, Heading, Avatar, Text, Badge} from 'theme-ui'
 import { Link as GatsbyLink, graphql } from "gatsby"
 import {Link, useIntl } from "gatsby-plugin-intl"
 import BlogCover from "../components/blog-cover"
@@ -39,10 +40,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         >
           <Grid columns={[1]}>
             <Box>
-              <Styled.h1 itemProp="headline" sx={{
+              <Themed.h1 itemProp="headline" sx={{
                 alignItems:'center',
                 fontWeight:400
-              }}>{post.frontmatter.title}</Styled.h1>
+              }}>{post.frontmatter.title}</Themed.h1>
               <Heading as="h4" sx={{
                 color:"gray",
                 fontWeight:400

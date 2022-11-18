@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { Footer as ThemeFooter, Styled, Flex, useColorMode, jsx, Box, Link as GatsbyLink, Grid, Button } from "theme-ui"
+import {Themed} from "@theme-ui/mdx"
+import { Footer as ThemeFooter,  Flex, useColorMode, jsx, Box, Link as GatsbyLink, Grid, Button } from "theme-ui"
 import { useIntl, Link } from "gatsby-plugin-intl"
 import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
 
@@ -31,7 +32,7 @@ const Footer = () => {
           >
             {({ languages, language: currentLocale }) =>
               languages.map(language => (
-                <Styled.a
+                <Themed.a
 
                   key={language}
                   onClick={() => changeLocale(language)}
@@ -50,7 +51,7 @@ const Footer = () => {
                   }}
                 >
                   {languageName[language]}
-                </Styled.a>
+                </Themed.a>
               ))
             }
           </IntlContextConsumer>

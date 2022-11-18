@@ -12,7 +12,7 @@ import telescopeImage from "../../static/features/telescope.svg"
 
 
 
-class notFoundPage extends React.Component {
+class NotFoundPage extends React.Component {
     constructor(props, intl) {
         super(props)
     }
@@ -66,4 +66,4 @@ class notFoundPage extends React.Component {
     }
 }
 
-export default injectIntl(notFoundPage)
+export default injectIntl(NotFoundPage)

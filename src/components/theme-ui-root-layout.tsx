@@ -1,14 +1,18 @@
 /** @jsx jsx */
 // @ts-ignore
-import { css, Styled, jsx } from "theme-ui"
+import { ThemeProvider } from "theme-ui"
+import { css, jsx } from "theme-ui"
 import React from "react"
-import { Global } from "@emotion/core"
+import { Global } from "@emotion/react"
 import SEO from "./seo"
+
+import theme from "../utils/theme"
 
 type LayoutProps = { children?: React.ReactNode; className?: string }
 
 const Layout = ({ children, className }: LayoutProps) => (
-  <Styled.root data-testid="theme-root">
+  <ThemeProvider theme={theme}>
+    
     <Global
       styles={css({
         "*": {
@@ -39,7 +43,7 @@ const Layout = ({ children, className }: LayoutProps) => (
     />
     <SEO />
     <main className={className}>{children}</main>
-  </Styled.root>
+  </ThemeProvider>
 )
 
 export default Layout

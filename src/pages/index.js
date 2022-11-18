@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from "react"
+import * as React from "react"
 import Layout from "../components/layout"
 import { Box, Grid, Image, Link, Text, Heading, Container, Flex, jsx } from "theme-ui"
 import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
@@ -45,7 +45,7 @@ class InfoCard extends React.Component {
           textAlign: ["center", "left", "left"]
         }}>
           <Heading as="h1" sx={{
-            color: "primary"
+            color: "primary",
           }}>{this.props.infoTitle}</Heading>
           <Text as="p">{this.props.infoContent}</Text>
         </Box>
@@ -366,10 +366,10 @@ function HomePage() {
   )
 }
 
+const Home = () => <Layout><HomePage></HomePage></Layout>;
 
+// const Home = () =>{
+//   return (<Layout><HomePage></HomePage></Layout>)
+// }
 
-export default function Home() {
-  return (<Layout>
-    <HomePage />
-  </Layout>)
-}
+export default Home

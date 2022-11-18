@@ -43,18 +43,6 @@ module.exports = {
     "gatsby-plugin-theme-ui",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Discuz Hub`,
-        short_name: `DiscHub`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
-        display: `standalone`
-      }
-    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
     {
@@ -134,6 +122,13 @@ module.exports = {
     },
     {
       resolve: "gatsby-plugin-page-creator",
+      options: {
+        name:'docs',
+        path: `${__dirname}/docs/`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
       options: {
         name:'docs',
         path: `${__dirname}/docs/`,
@@ -250,30 +245,9 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1035,
-              sizeByPixelDensity: true,
             },
           },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options:{
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              showLineNumbers: true,
-              // If setting this to true, the parser won't handle and highlight inline
-              // code used in markdown i.e. single backtick code like `this`.
-              noInlineHighlight: false,
-
-            }
-
-          }
         ],
-        shouldBlockNodeFromTransformation(node) {
-          return (
-            [`NPMPackage`, `NPMPackageReadme`].includes(node.internal.type) ||
-            (node.internal.type === `File` &&
-              path.parse(node.dir).dir.endsWith(`packages`))
-          )
-        },
       },
     },
     

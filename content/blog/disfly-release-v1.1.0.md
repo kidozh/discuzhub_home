@@ -2,7 +2,7 @@
 title: 谈坛1.1.0版本已发布
 tags: [通知]
 keywords: [更新]
-date: 2022-6-6T08:33:00.226Z
+date: 2022-6-26T08:33:00.226Z
 cover: beach-g735e4c851_1920.jpg
 excerpt: 我们发布了1.1.0版本的谈坛
 ---

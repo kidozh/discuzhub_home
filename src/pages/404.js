@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import {  Box, Grid, Heading } from 'theme-ui'
 import { injectIntl } from "gatsby-plugin-intl"
 
-class notFoundPage extends React.Component {
+class NotFoundPage extends React.Component {
     constructor(props, intl) {
         super(props)
     }
@@ -33,4 +33,4 @@ class notFoundPage extends React.Component {
     }
 }
 
-export default injectIntl(notFoundPage)
+export default injectIntl(NotFoundPage)

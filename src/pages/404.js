@@ -4,14 +4,8 @@ import Layout from "../components/layout"
 import {  Box, Grid, Heading } from 'theme-ui'
 import { injectIntl } from "gatsby-plugin-intl"
 
-class NotFoundPage extends React.Component {
-    constructor(props, intl) {
-        super(props)
-    }
-
-    render() {
-        const { intl } = this.props;
-        return (
+const NotFoundPage = ({intl}) => {
+    return (
             <Layout>
                 <Grid>
                     <Box sx={{
@@ -30,7 +24,6 @@ class NotFoundPage extends React.Component {
                 </Grid>
             </Layout>
         )
-    }
 }
 
-export default injectIntl(NotFoundPage)
+export default NotFoundPage

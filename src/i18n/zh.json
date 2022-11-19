@@ -2,14 +2,14 @@
     "title": "Discuz Hub",
     "description": "轻量开源的Discuz！论坛应用",
     "intro": {
-        "title": "Discuz Hub",
+        "title": "Discuz Hub及谈坛",
         "description": "轻量开源的Discuz！论坛应用",
         "function_annotate": "需要开启论坛的手机页面同时关闭防捕捉模式",
         "download_by_github": "通过Github发布下载",
         "download_by_weiyun":"通过腾讯微云下载",
         "project_at_github": "托管于Github上的项目",
         "lightweight":"轻量的",
-        "discuz_app":"Discuz!安卓应用",
+        "discuz_app":"Discuz!跨平台应用",
         "disfly":"由谈坛提供服务",
         "administrator_note":"版主可以点击这里更好的兼容我们的应用👉",
         "disfly_provider":"由谈坛提供服务"
@@ -20,8 +20,8 @@
         "lightweight_annotate": "APK安装包不到10M，支持完整的Discuz！发帖任务",
         "open_source": "开源软件",
         "open_source_annotate": "本项目基于MIT开源协议开源，项目托管于Github上",
-        "android_support": "Android 11 支持",
-        "android_support_annotate": "应用支持诸多Android 11的新特性（比如深色模式，新的文件管理方式等）",
+        "android_support": "Android 13及iOS 支持",
+        "android_support_annotate": "应用支持诸多Android 13及iOS的新特性（比如深色模式，新的文件管理方式等）",
         "green_android_convention_support": "全面支持Android绿色公约",
         "green_android_convention_support_annotate": "应用遵循第4版Android绿色公约进行设计",
         "download_by_github": "通过Github release下载",
@@ -44,7 +44,8 @@
         "github_action_acknowledged": "感谢对于本项目的Fork，Star或者PR.",
         "contact_us":"联系我们",
         "email":"邮件",
-        "github":"Github"
+        "github":"Github",
+        "weibo":"微博"
     },
     "nav":{
         "blog": "开发者博客",

@@ -42,7 +42,8 @@
         "github_action_acknowledged": "感謝對於本項目的Fork，Star或者PR.",
         "contact_us": "聯繫我們",
         "email": "郵件",
-        "github": "Github"
+        "github": "Github",
+        "weibo":"微博"
     },
     "nav": {
         "blog": "開發者博客",

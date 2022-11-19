@@ -1,5 +1,5 @@
 import React from "react"
-import { Grid, Link } from 'theme-ui'
+import { Grid, Link, Alert } from 'theme-ui'
 
 import FAQCard from "../questionAndAnswerCard"
 
@@ -25,7 +25,8 @@ export default ({ children }) => (
         </FAQCard>
 
         <FAQCard subject="Are there any ads? And will there be?">
-            <p>In forseable time, there is no ad projects. If some ads is added to app, we will notice in <Link href="/blog/">developer blog</Link> and our <Link href="/term_of_use/">terms of services</Link></p>
+            <Alert>DisFly is estimated to show ads provided by Google for financial compensation.</Alert>
+            <p><del>In forseable time, there is no ad projects.</del> If some ads is added to app, we will notice in <Link href="/dev-blog/">developer blog</Link> and our <Link href="/term_of_use/">terms of services</Link></p>
         </FAQCard>
 
         <FAQCard subject="Should the developer be responsible for the use of discuzhub?">

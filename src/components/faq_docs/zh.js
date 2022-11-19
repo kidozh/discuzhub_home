@@ -28,7 +28,8 @@ export default ({ children }) => (
         </FAQCard>
 
         <FAQCard subject="现在应用有广告吗？以后会有吗？">
-            <p>目前来说我们没有向应用植入广告的计划。未来如果我们有相关的计划的话，我们将会在我们的<Link href="/blog/">开发者博客</Link>、<Link href="/term_of_use/">服务协议</Link>中向您说明情况</p>
+            <Alert>我们预计将在谈坛中植入由Google提供的广告</Alert>
+            <p><del>目前来说我们没有向应用植入广告的计划。</del>未来如果我们有相关的计划的话，我们将会在我们的<Link href="/dev-blog/">开发者博客</Link>、<Link href="/term_of_use/">服务协议</Link>中向您说明情况</p>
         </FAQCard>
 
         <FAQCard subject="开发者会为使用提供担保或者负责嘛？">

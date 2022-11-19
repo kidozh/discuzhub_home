@@ -3,7 +3,7 @@ title: 谈坛1.1.5版本已发布
 tags: [通知]
 keywords: [更新]
 date: 2022-11-15T08:33:00.226Z
-cover: beach-g735e4c851_1920.jpg
+cover: shenyang-gbf82899bc_1920.jpg
 excerpt: 我们发布了1.1.5版本的谈坛
 ---
 

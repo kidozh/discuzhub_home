@@ -1,5 +1,5 @@
 import React from "react"
-import {  useIntl } from 'react-intl';
+import {  useIntl } from 'gatsby-plugin-intl';
 import DocLayout from "../components/doc-layout"
 import { Box, Grid, Heading, Text, Badge } from "theme-ui"
 

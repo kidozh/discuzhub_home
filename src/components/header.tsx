@@ -44,7 +44,7 @@ const Header = () => {
           variant: 'styles.header',
         }}
       >
-        <Grid columns={[1,"6fr 4fr"]}>
+        <Grid columns={[1,"6fr 4fr", "6fr 2fr"]}>
           <Box>
             <Image src={Logo}
                    ratio={1}

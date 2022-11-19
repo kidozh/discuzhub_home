@@ -5,7 +5,7 @@ import { injectIntl } from "gatsby-plugin-intl"
 
 
 
-class testPage extends React.Component {
+class TestPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -367,4 +367,4 @@ class testPage extends React.Component {
 
 
 
-export default injectIntl(testPage)
+export default injectIntl(TestPage)

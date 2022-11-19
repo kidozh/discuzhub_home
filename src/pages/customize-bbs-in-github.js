@@ -1,5 +1,5 @@
 import React from "react"
-import { IntlProvider, FormattedMessage, useIntl, injectIntl } from 'react-intl';
+import { IntlProvider, FormattedMessage, useIntl, injectIntl } from 'gatsby-plugin-intl';
 import Layout from "../components/doc-layout"
 import ZH from "../../sections/customize_app_github_action/zh"
 import EN from "../../sections/customize_app_github_action/en"

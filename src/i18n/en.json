@@ -1,6 +1,6 @@
 {
-    "title": "Discuz Hub",
-    "description": "Easy, lightweight and open-sourced android app for discuz! mobile",
+    "title": "Discuz Hub & DisFly",
+    "description": "Easy, lightweight and open-sourced android app for cross-platform mobile",
     "intro": {
         "title": "Discuz Hub",
         "description": "Easy, lightweight and open-sourced android app for discuz! mobile",
@@ -9,7 +9,7 @@
         "download_by_weiyun": "Download by Tencent Weiyun",
         "project_at_github": "DiscuzHub@Github",
         "lightweight":"Lightweight",
-        "discuz_app":"Discuz! Android App",
+        "discuz_app":"Discuz! Android & iOS App",
         "disfly":"Provided by DisFly",
         "administrator_note":"You may use this link to make your bbs compatible with us!👉",
         "disfly_provider":"Provided by DisFly"
@@ -20,8 +20,8 @@
         "lightweight_annotate": "Apk is less than 20MB but still supports most discuz! operations",
         "open_source": "Open source",
         "open_source_annotate": "The project is open-sourced with MIT License and hosted at github",
-        "android_support": "Android Q support",
-        "android_support_annotate": "App is compatible with new Android Q features(Dark mode and permission etcs)",
+        "android_support": "Android Q & iOS support",
+        "android_support_annotate": "App is compatible with new Android & iOS features(Dark mode and permission etcs)",
         "green_android_convention_support": "Green android supports",
         "green_android_convention_support_annotate": "The app is designed coordinated with green android convention version 4.0"
     },
@@ -40,7 +40,8 @@
         "github_action_acknowledged": "Fork, star or pull request on the project are sincerely acknowledged.",
         "contact_us":"Contact us",
         "email":"Email",
-        "github":"Github"
+        "github":"Github",
+        "weibo":"Weibo"
     },
     "footer": {
         "copyright": "Copyrights",
@@ -133,7 +134,7 @@
         "cross_platform_title":"Browse across most discuz! BBS",
         "cross_platform_content":"Use DiscuzHub for most discuz! BBS - Native app for discussing, polling and friending",
         "speed_and_performance_title":"Speed and performance",
-        "speed_and_performance_content":"Using up-to-date API and following green android convention, our app have only 6 Megabytes \n Discuzhub puts you in control over practice. Requring light-weight APIs and packages, the app can run smoothly on low-profile devices.",
+        "speed_and_performance_content":"Using up-to-date API and following green android convention, our app have very little size while maintaining most neccessary functions \n Discuzhub puts you in control over practice. Requring light-weight APIs and packages, the app can run smoothly on low-profile devices.",
         "powerful_tool_title":"Powerful tool",
         "powerful_tool_content":"By open-sourced packages, discuzhub now can handle variety of messages. Using Discuz! open native API, you can enjoy native services which ensures your data safety. Keep compatible and safe all on your browsing.",
         "open_source_title":"Open source software",

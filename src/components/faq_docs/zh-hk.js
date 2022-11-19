@@ -1,5 +1,5 @@
 import React from "react"
-import { Grid, Link } from 'theme-ui'
+import { Grid, Link, Alert } from 'theme-ui'
 
 
 import FAQCard from "../questionAndAnswerCard"
@@ -47,8 +47,8 @@ export default ({ children } )=> (
 
 
     <FAQCard subject="現在應用有廣告嗎？以後會有嗎？">
-
-        <p>現時來說我們沒有向應用植入廣告的計畫。未來如果我們有相關的計畫的話，我們將會在我們的<Link href="/blog/">開發者部落格</Link>、<Link href="/term_of_services/">服務協定</Link>中向您說明情况</p>
+        <Alert>我们预计将在谈坛中植入由Google提供的广告</Alert>
+        <p>現時來說我們沒有向應用植入廣告的計畫。未來如果我們有相關的計畫的話，我們將會在我們的<Link href="/dev-blog/">開發者部落格</Link>、<Link href="/term_of_services/">服務協定</Link>中向您說明情况</p>
 
     </FAQCard>
 

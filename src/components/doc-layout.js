@@ -1,13 +1,11 @@
 /** @jsx jsx */
 import React from "react"
-import {Themed} from "@theme-ui/mdx"
+import { Themed } from "@theme-ui/mdx"
 import { Container, jsx, Heading, Link, Text } from "theme-ui"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl, IntlProvider } from "gatsby-plugin-intl"
 import Layout from "./layout"
 import { graphql, useStaticQuery } from "gatsby"
-import {
-  MDXProvider,
-} from '@mdx-js/react'
+import { MDXProvider } from '@mdx-js/react'
 import { ThemeProvider } from 'theme-ui'
 import Prism from '@theme-ui/prism'
 import theme from './prism-theme'
@@ -80,14 +78,12 @@ export default ({ subject, children }) => {
           pt: [1, 2, 2],
           pb: [1, 2, 2]
         }}>
-          <MDXProvider components={{
-            a: Link,
-            pre: ({ children }) => <>{children}</>,
-            code: Prism,
-          }}>
-            {children}
-          </MDXProvider>
-          
+          {/* <MDXProvider components={components}> */}
+
+          {children}
+
+          {/* </MDXProvider> */}
+
 
 
 
@@ -95,6 +91,7 @@ export default ({ subject, children }) => {
 
       </Layout>
     </ThemeProvider>
+
 
   )
 }

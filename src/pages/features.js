@@ -1,5 +1,5 @@
 import React from "react"
-import { IntlProvider, FormattedMessage, useIntl, injectIntl } from 'react-intl';
+import { IntlProvider, FormattedMessage, useIntl, injectIntl } from 'gatsby-plugin-intl';
 import DocLayout from "../components/doc-layout"
 import ENFeatures from "../components/features_docs/en"
 import ZHFeatures from "../components/features_docs/zh"

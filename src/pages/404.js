@@ -2,9 +2,10 @@ import React from "react"
 
 import Layout from "../components/layout"
 import {  Box, Grid, Heading } from 'theme-ui'
-import { injectIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 
-const NotFoundPage = ({intl}) => {
+const NotFoundPage = () => {
+    const intl = useIntl()
     return (
             <Layout>
                 <Grid>

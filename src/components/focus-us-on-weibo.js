@@ -22,9 +22,12 @@ const Banner = () => {
               textAlign:["center","center","center"],
               width:"100%",
               justifyContent:"center"}}>
-            <Box><center><Link href="https://weibo.com/u/7436177109" sx={{
+            <Box><center><Link href="" sx={{
                 color:"white"
-            }}><FontAwesomeIcon icon={faBell} /> 在微博上关注我们</Link></center></Box>
+            }}><FontAwesomeIcon icon={faBell}  sx={{
+              width: 16,
+              height: 16
+            }}/> 实现实时消息推送，支持iOS，Android以及MacOS客户端。</Link></center></Box>
             
         </Grid>
 

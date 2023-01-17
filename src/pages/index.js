@@ -276,8 +276,8 @@ function HomePage() {
             textAlign : "center",
             wordWrap:"break-word",
             color:'heading'
-          }} >🧐 <FormattedMessage id="intro.administrator_note" />
-            <Link href="/compatibility-guide/"><FormattedMessage id="compatibility.compatibility_title" /></Link>
+          }} ><FormattedMessage id="index.dhpush_installation" />
+            <Link href="https://dhp.kidozh.com">DHPush</Link>
           </Heading>
         </Box>
 

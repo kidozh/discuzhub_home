@@ -120,6 +120,8 @@
         "bbs_not_pass_result":"抱歉，您的论坛并未通过兼容性测试，你可以联系网站管理员开启Discuz移动版",
         "loading_data":"从服务器{url}取得数据中。。。",
         "app_add_guide":"你可以通过链接 {url} 向discuzHub添加论坛 {name} ",
+        "redirect_to_dhpush_title":"当前此功能已经由于Cross anywhere的失效不再适用，请使用DHPush推送兼容性检查服务以获得兼容性报告",
+        "redirect_to_dhpush_name":"DHPush兼容性检查",
         "example":"例子"
     },
     "back_to_top":"回到顶部",
@@ -144,6 +146,7 @@
         "powerful_tool_content":"遵循Google开发者指南，Discuz Hub能够优雅的实现绝大多数的论坛的交互。使用官方的移动API，能够使得您在使用应用访问各种各样的论坛时，都获得优雅而稳定的服务。得益于API调用而不是渲染HTML页面，因Javascript错误执行而引发的CSRF和XSS问题也不会发生。",
         "open_source_title":"开源软件",
         "open_source_content":"基于MIT开源协议授权，您可以自由地对DiscuzHub进行检查、修改以及重新发布。您可以按照您的需求对于DiscuzHub进行自由的探索。",
+        "dhpush_installation":"使用DHPush实现实时推送功能",
         "fork_on_github_title":"帮助我们！",
         "fork_on_github_content":"您可以通过Github对我们的App进行分支、合并请求来帮助我们做得更好。也非常欢迎您通过Issue方法向我们提出您的意见和建议，非常感谢您的帮助和支持。"
     },

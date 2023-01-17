@@ -117,6 +117,8 @@
         "bbs_not_pass_result": "抱歉，您的論壇並未通過兼容性測試，你可以聯繫網站管理員開啟Discuz移動版",
         "loading_data": "從服務器{url}取得數據中。。。",
         "app_add_guide": "你可以通過鏈接 {url} 向discuzHub添加論壇 {name} ",
+        "redirect_to_dhpush_title":"當前此功能已經由於Cross anywhere的失效不再適用，請使用DHPush推送兼容性檢查服務以獲得兼容性報告",
+        "redirect_to_dhpush_name":"DHPush兼容性檢查",
         "example": "例子"
     },
     "back_to_top": "回到頂部",
@@ -141,6 +143,7 @@
         "powerful_tool_content": "通過各種各樣的穩健的庫，DiscuzHub能夠優雅的實現絕大多數的論壇的交互。使用官方的API，能夠使得您在使用應用訪問各種各樣的論壇時，都獲得均一而穩定的服務，同時也有益於防止因Javascript錯誤執行而引發的CSRF和XSS風險。",
         "open_source_title": "開源軟件",
         "open_source_content": "基於MIT開源協議授權，您可以自由地對DiscuzHub進行檢查、修改以及重新發布。您可以按照您的需求對於DiscuzHub進行自由的探索。",
+        "dhpush_installation":"使用DHPush实现实时推送功能",
         "fork_on_github_title": "幫助我們！",
         "fork_on_github_content": "您可以通過Github對我們的App進行分支、合併請求來幫助我們做得更好。也非常歡迎您通過Issue方法向我們提出您的意見和建議，非常感謝您的幫助和支持。 "
     },

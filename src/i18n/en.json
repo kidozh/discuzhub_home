@@ -114,6 +114,8 @@
         "bbs_not_pass_result":"Oops, your bbs cannot work with discuzHub",
         "loading_data":"Loading data from server: {url}",
         "app_add_guide":"You can add {name} to discuzHub by URL: {url}",
+        "redirect_to_dhpush_title":"Currently this page is not working anymore, please visit to DHPush for further function",
+        "redirect_to_dhpush_name":"DHPush compatibility checker",
         "example":"Example"
     
     },
@@ -141,6 +143,7 @@
         "open_source_content":"Licensed by MIT, you can watch, change and redistribute software on your own. The software is on your oyster.",
         "fork_on_github_title":"Contribute to us",
         "fork_on_github_content":"Are you developer? Please feel free to star, fork and make pull request to us!",
+        "dhpush_installation":"Using DHPush to enable push service",
         "any":"Cross most discuz! BBS"
     },
     "open_source":{

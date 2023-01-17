@@ -1,11 +1,11 @@
 import React from "react"
 import {  useIntl } from 'gatsby-plugin-intl';
 import DocLayout from "../components/doc-layout"
-import EN from "../../sections/compatibility_guide/en"
-import ZH from "../../sections/compatibility_guide/zh"
-import ZHHK from "../../sections/compatibility_guide/zh-hk"
+import EN from "../../sections/add_a_bbs/en"
+import ZH from "../../sections/add_a_bbs/zh"
+import ZHHK from "../../sections/add_a_bbs/zh-hk"
 
-const UpgradeAPIPage = () => {
+const AddDiscuzGuidePage = () => {
 
     const intl = useIntl()
     return (
@@ -14,7 +14,7 @@ const UpgradeAPIPage = () => {
             mb:6
         }}
         
-        subject={intl.formatMessage({ id: "compatibility.compatibility_title" })}>
+        subject={intl.formatMessage({ id: "add_bbs.add_bbs_title" })}>
             {intl.locale === "en" && <EN/>}
             {intl.locale === "zh" && <ZH/>}
             {intl.locale === "zh-hk" && <ZHHK/>}
@@ -26,4 +26,4 @@ const UpgradeAPIPage = () => {
 }
 
 
-export default UpgradeAPIPage
+export default AddDiscuzGuidePage

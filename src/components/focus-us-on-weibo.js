@@ -22,7 +22,7 @@ const Banner = () => {
               textAlign:["center","center","center"],
               width:"100%",
               justifyContent:"center"}}>
-            <Box><center><Link href="" sx={{
+            <Box><center><Link href="https://dhp.kidozh.com" sx={{
                 color:"white"
             }}><FontAwesomeIcon icon={faBell}  sx={{
               width: 16,

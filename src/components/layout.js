@@ -12,7 +12,7 @@ function Layout ({ location, title, children,subject }){
   return (
     <RootLayout className="discuzhub">
       <SEO title={title} />
-      <Banner/>
+      {/* <Banner/> */}
       {/* header */}
 
       <Header/>

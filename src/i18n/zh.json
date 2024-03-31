@@ -42,15 +42,15 @@
         "contact_1": "kidozh@gmail.com(开发者邮箱)",
         "contact_2": "在Github上托管的DiscuzHub项目",
         "github_action_acknowledged": "感谢对于本项目的Fork，Star或者PR.",
-        "contact_us":"联系我们",
+        "contact_us":"联系",
         "email":"邮件",
         "github":"Github",
         "weibo":"微博"
     },
     "nav":{
-        "blog": "开发者博客",
-        "contact": "联系我",
-        "faq": "常见问题集",
+        "blog": "博客",
+        "contact": "联系",
+        "faq": "FAQ",
         "features": "功能",
         "privacy": "隐私政策",
         "terms_of_use":"使用条款"
@@ -69,7 +69,7 @@
         "dark":"深色模式"
     },
     "blog":{
-        "blog": "开发者博客",
+        "blog": "博客",
         "blog_annotation" :"你可以在这里获取应用的更新、安全和计划等信息🧐",
         "timeToReadUnit": "{min} 分钟",
         "publishTime": "发表于 {time}",
@@ -127,7 +127,7 @@
     "back_to_top":"回到顶部",
     "faq":{
         "faq":"常见问题",
-        "faq_full":"常见问题集"
+        "faq_full":"Q & A"
     },
     "privacy":{
         "privacy_policy":"隐私政策",

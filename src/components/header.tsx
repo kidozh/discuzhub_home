@@ -17,10 +17,12 @@ const languageName = {
 
 const Header = () => {
   const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === `dark`
-  const toggleColorMode = (e: any) => {
-    setColorMode(isDark ? `light` : `dark`)
-  }
+  // const isDark = colorMode === `dark`
+  // const toggleColorMode = (e: any) => {
+  //   setColorMode(isDark ? `light` : `dark`)
+  // }
+
+  setColorMode('light')
   const intl = useIntl()
   const { site } = useStaticQuery(
     graphql`
@@ -87,13 +89,6 @@ const Header = () => {
                         }}>
                 <FormattedMessage id="nav.faq" />
               </IntlLink>
-              <IntlLink as={NavLink} to='/sponsor-us/'
-                        sx={{
-                          variant: 'styles.navlink',
-                          p: 2,
-                        }}>
-                <FormattedMessage id="sponsor.sponsor" />
-              </IntlLink>
               <IntlLink as={NavLink} to='/contact'
                         sx={{
                           variant: 'styles.navlink',
@@ -101,17 +96,7 @@ const Header = () => {
                         }}>
                 <FormattedMessage id="nav.contact" />
               </IntlLink>
-              <Button
-                sx={{
-                  variant: `buttons.toggle`,
-                  hidden:[true,false,false]
-                }}
-                onClick={toggleColorMode}
-                type="button"
-                aria-label="Toggle dark mode"
-              >
-                {isDark ? intl.formatMessage({ id: "footer.light" }) : intl.formatMessage({ id: "footer.dark" })}
-              </Button>
+              
             </Grid>
           </Box>
         </Grid>

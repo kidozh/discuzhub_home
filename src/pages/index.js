@@ -160,7 +160,7 @@ function HomePage() {
           fontSize: 30,
           fontWeight: 200
         }}><FormattedMessage id="intro.lightweight" /> <FormattedMessage id="intro.discuz_app" /></Text>
-        <Grid columns={[1,4,4]} sx={{
+        <Grid columns={[1,3,3]} sx={{
           pl:[1,2,4],
           pr:[1,2,4],
           mt:4,
@@ -214,36 +214,6 @@ function HomePage() {
             </Link>
           </Box>
           <Box sx={{
-            textAlign: ["center", "center", "center"],
-            mt:[2,2,3],
-            mb:[2,2,3],
-          }}>
-            <Link
-              href="/nightly-version/"
-              sx={{
-                fontSize: 24,
-                fontWeight: 500,
-                backgroundColor:"primary",
-                color:"white",
-                pt:[1,2,2],
-                pb:[1,2,2],
-                pl:[4,4,4],
-                pr:[4,4,4],
-                borderRadius:8,
-                "&:hover":{
-                  backgroundColor:"accent",
-                  color:"white",
-                  transition: "all .35s ease",
-                  textDecoration:"none"
-                }
-                
-              }}
-              >
-
-              {intl.formatMessage({"id":"nightly_version.nightly"})}
-            </Link>
-          </Box>
-          <Box sx={{
             textAlign: ["center", "left", "left"],
             mt:[2,2,3],
             mb:[2,2,3],
@@ -264,24 +234,6 @@ function HomePage() {
         </Grid>
 
       </Container>
-      <Grid sx={{
-        mb: 4,
-        mt: 4,
-        ml: 2,
-        mr: 2
-      }}>
-        <Box>
-          <Heading as="h2" sx={{
-            fontWeight: 400,
-            textAlign : "center",
-            wordWrap:"break-word",
-            color:'heading'
-          }} ><FormattedMessage id="index.dhpush_installation" />
-            <Link href="https://dhp.kidozh.com">DHPush</Link>
-          </Heading>
-        </Box>
-
-      </Grid>
       <Grid columns={[1, '1fr 8fr 1fr', '1fr 6fr 1fr']}
             sx={{
               mb: 4,

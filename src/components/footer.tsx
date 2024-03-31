@@ -91,8 +91,6 @@ const Footer = () => {
             <Box><Link to="/privacy_policy/">{intl.formatMessage({ id: "nav.privacy" })}</Link></Box>
             <Box><Link to="/test-my-bbs/">{intl.formatMessage({ id: "test-my-bbs.title" })}</Link></Box>
             <Box><Link to="/open_source_licence/">{intl.formatMessage({ id: "open_source.open_source_title" })}</Link></Box>
-            <Box><Link to="/compatibility-guide/">{intl.formatMessage({ id: "compatibility.compatibility_title" })}</Link></Box>
-            <Box><Link to="/sponsor-us/">{intl.formatMessage({ id: "sponsor.sponsor_title" })}</Link></Box>
             <Box><Link to="/customize-bbs/">{intl.formatMessage({ id: "customize.customize_locally_title" })}</Link></Box>
             <Box><Link to="/customize-bbs-in-github/">{intl.formatMessage({ id: "customize.customize_github_title" })}</Link></Box>
           </Grid>

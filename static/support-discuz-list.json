@@ -53,6 +53,27 @@
             "icon":"https://ditiee-app.oss-cn-guangzhou.aliyuncs.com/static/image/common/logo.png"
         },
         {
+            "name":"数码之家",
+            "url":"http://www.mydigit.cn",
+            "desc":"爱科技,爱创意,爱折腾,我们都是技术控。",
+            "beian":"闽ICP备2021002735号-2",
+            "type":"discuz"
+        },
+        {
+            "name":"琵琶行论坛",
+            "url":"https://www.ppxclub.com",
+            "desc":"模拟器|推理剧|琵琶行|纸模|字幕组|MAME|PS2|PS3|NDS|PSP",
+            "beian":"赣ICP备12000882号",
+            "type":"discuz"
+        },
+        {
+            "name":"牧夫天文网",
+            "url":"https://bbs.imufu.cn",
+            "desc":"国内最早的天文论坛，致力于天文和望远镜的科普交流平台.",
+            "beian":"辽ICP备19018387号",
+            "type":"discuz"
+        },
+        {
             "name":"全球主机交流论坛",
             "url":"https://hostloc.com",
             "desc":"全球主机交流论坛。",
@@ -60,16 +81,23 @@
             "type":"discuz"
         },
         {
-            "name":"吉他中国论坛",
-            "url":"https://bbs.guitarschina.com",
-            "desc":"吉他中国论坛 - 中国乐手的网络精神家园！",
+            "name":"TalkOP海道",
+            "url":"https://bbs.talkop.com",
+            "desc":"中国最大的海贼王论坛致力于为广大One Piece海贼王（航海王）爱好者提供一个最有爱的交流平台。",
             "beian":"",
             "type":"discuz"
         },
         {
-            "name":"TalkOP海道",
-            "url":"https://bbs.talkop.com",
-            "desc":"中国最大的海贼王论坛致力于为广大One Piece海贼王（航海王）爱好者提供一个最有爱的交流平台。",
+            "name":"专门网",
+            "url":"https://www.ibmnb.com",
+            "desc":"笔记本论坛,笔记本评测,笔记本使用技巧,购买笔记本,笔记本配件,笔记本行情.",
+            "beian":"",
+            "type":"discuz"
+        },
+        {
+            "name":"吉他中国论坛",
+            "url":"https://bbs.guitarschina.com",
+            "desc":"吉他中国论坛 - 中国乐手的网络精神家园！",
             "beian":"",
             "type":"discuz"
         }

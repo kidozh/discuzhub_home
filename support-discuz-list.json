@@ -53,6 +53,22 @@
             "icon":"https://ditiee-app.oss-cn-guangzhou.aliyuncs.com/static/image/common/logo.png"
         },
         {
+            "name":"完美游戏社区",
+            "url":"https://bbs.wanmei.com",
+            "desc":"完美游戏论坛。",
+            "beian":"京ICP证：160281号",
+            "type":"discuz",
+            "icon":"https://static.games.wanmei.com/public/images/top20220704/logo221010.png"
+        },
+        {
+            "name":"雷霆游戏社区",
+            "url":"https://bbs.leiting.com",
+            "desc":"雷霆游戏由一群热爱游戏的发烧友组成，以“创造美好体验”为使命，为玩家提供“好玩和独特的精品游戏”；看重“用户口碑”，为追求体验升级的玩家服务。",
+            "beian":"闽ICP备12001243号-4",
+            "type":"discuz",
+            "icon":"https://static.games.wanmei.com/public/images/top20220704/logo221010.png"
+        },
+        {
             "name":"数码之家",
             "url":"http://www.mydigit.cn",
             "desc":"爱科技,爱创意,爱折腾,我们都是技术控。",
@@ -74,6 +90,14 @@
             "beian":"辽ICP备19018387号",
             "icon": "https://bbs.imufu.cn/template/qing/image/imufu_web_ico.png",
             "type":"discuz"
+        },
+        {
+            "name":"空分技术论坛",
+            "url":"https://bbs.kongfen.org.cn",
+            "desc":"中国空分网空分技术论坛，空分之家，化工论坛,空分技术论坛做中国最人性化行业社区。提供空分技术、空分设备、自动化控制、有问必答、空分论文资料共享交流下载服务。",
+            "beian":"鲁ICP备10016836",
+            "type":"discuz",
+            "icon":"https://bbs.kongfen.org.cn/template/guiigo_qing/images/logo.png"
         },
         {
             "name":"全球主机交流论坛",

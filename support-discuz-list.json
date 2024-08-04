@@ -100,6 +100,14 @@
             "icon":"https://bbs.kongfen.org.cn/template/guiigo_qing/images/logo.png"
         },
         {
+            "name":"钢笔论坛",
+            "url":"https://www.penbbs.com",
+            "desc":"钢笔论坛。",
+            "beian":"桂ICP备12002903号 ",
+            "type":"discuz",
+            "icon":"http://www.penbbs.com/static/image/common/logo.gif"
+        },
+        {
             "name":"全球主机交流论坛",
             "url":"https://hostloc.com",
             "desc":"全球主机交流论坛。",
@@ -133,6 +141,13 @@
             "name":"吉他中国论坛",
             "url":"https://bbs.guitarschina.com",
             "desc":"吉他中国论坛 - 中国乐手的网络精神家园！",
+            "beian":"",
+            "type":"discuz"
+        },
+        {
+            "name":"硬汉嵌入式论坛",
+            "url":"https://www.armbbs.cn",
+            "desc":"开源嵌入式论坛，开办STM32F103、 STM32F407、STM32H743、STM32H750版块。",
             "beian":"",
             "type":"discuz"
         }

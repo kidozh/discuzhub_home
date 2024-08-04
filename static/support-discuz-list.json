@@ -91,6 +91,13 @@
             "type":"discuz"
         },
         {
+            "name":"瀚思彼岸",
+            "url":"https://bbs.hassbian.com",
+            "desc":"Home Assistant智能家居技术论坛，分享Home Assistant技术，发布原创HomeAssistant教程，发布智能硬件DIY，让你尽情感受智能家庭的魅力！",
+            "beian":"",
+            "type":"discuz"
+        },
+        {
             "name":"专门网",
             "url":"https://www.ibmnb.com",
             "desc":"笔记本论坛,笔记本评测,笔记本使用技巧,购买笔记本,笔记本配件,笔记本行情.",

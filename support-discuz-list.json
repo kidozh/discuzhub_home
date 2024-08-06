@@ -65,8 +65,7 @@
             "url":"https://bbs.leiting.com",
             "desc":"雷霆游戏由一群热爱游戏的发烧友组成，以“创造美好体验”为使命，为玩家提供“好玩和独特的精品游戏”；看重“用户口碑”，为追求体验升级的玩家服务。",
             "beian":"闽ICP备12001243号-4",
-            "type":"discuz",
-            "icon":"https://static.games.wanmei.com/public/images/top20220704/logo221010.png"
+            "type":"discuz"
         },
         {
             "name":"数码之家",
@@ -106,6 +105,14 @@
             "beian":"桂ICP备12002903号 ",
             "type":"discuz",
             "icon":"http://www.penbbs.com/static/image/common/logo.gif"
+        },
+        {
+            "name":"51Testing软件测试网",
+            "url":"http://bbs.51testing.com",
+            "desc":"软件测试人的精神家园,介绍先进的软件测试工具、 软件测试流程和软件测试思想，定期举办软件测试沙龙，软件测试精品 资料下载，提供专业的软件测试培训服务。",
+            "beian":"沪ICP备05003035号 ",
+            "type":"discuz",
+            "icon":"http://bbs.51testing.com/static/image/common/logo.png"
         },
         {
             "name":"全球主机交流论坛",

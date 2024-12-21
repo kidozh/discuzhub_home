@@ -75,14 +75,6 @@
             "type":"discuz"
         },
         {
-            "name":"琵琶行论坛",
-            "url":"https://www.ppxclub.com",
-            "desc":"模拟器|推理剧|琵琶行|纸模|字幕组|MAME|PS2|PS3|NDS|PSP",
-            "beian":"赣ICP备12000882号",
-            "icon":"https://www.ppxclub.com/static/image/common/logo.gif",
-            "type":"discuz"
-        },
-        {
             "name":"牧夫天文网",
             "url":"https://bbs.imufu.cn",
             "desc":"国内最早的天文论坛，致力于天文和望远镜的科普交流平台.",
@@ -113,6 +105,13 @@
             "beian":"沪ICP备05003035号 ",
             "type":"discuz",
             "icon":"http://bbs.51testing.com/static/image/common/logo.png"
+        },
+        {
+            "name":"远景在线",
+            "url":"https://bbs.pcbeta.com",
+            "desc":"前沿科技与智慧生态的极客社区.",
+            "beian":"苏ICP备17027154号",
+            "type":"discuz"
         },
         {
             "name":"全球主机交流论坛",

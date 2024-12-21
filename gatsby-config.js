@@ -39,6 +39,9 @@ module.exports = {
     ]
 
   },
+  flags: {
+    DEV_SSR: true
+  },
   plugins: [
     {
       resolve: 'gatsby-plugin-theme-ui',
@@ -49,12 +52,14 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-offline`,
+    //`gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+        omitGoogleFont: true,
       },
     },
     {

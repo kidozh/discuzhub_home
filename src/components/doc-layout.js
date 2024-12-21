@@ -6,11 +6,17 @@ import { useIntl, IntlProvider } from "gatsby-plugin-intl"
 import Layout from "./layout"
 import { graphql, useStaticQuery } from "gatsby"
 import { MDXProvider } from '@mdx-js/react'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
 import Prism from '@theme-ui/prism'
 import theme from './prism-theme'
 
+import Typography from "typography"
+import grandViewTheme from "typography-theme-grand-view"
 
+const typography = new Typography(grandViewTheme)
+
+// Export helper functions
+export const { scale, rhythm, options } = typography
 
 
 const components = {
@@ -47,7 +53,7 @@ export default ({ subject, children }) => {
   `)
 
   return (
-    <ThemeProvider
+    <ThemeUIProvider
       theme={theme}
     >
       <Layout title={subject}>
@@ -75,8 +81,8 @@ export default ({ subject, children }) => {
         <Container as="article" sx={{
           px: [2, 4, 6],
           py: [2, 4, 6],
-          pt: [1, 2, 2],
-          pb: [1, 2, 2]
+          pt: [2, 4, 4],
+          pb: [2, 4, 4]
         }}>
           {/* <MDXProvider components={components}> */}
 
@@ -90,7 +96,7 @@ export default ({ subject, children }) => {
         </Container>
 
       </Layout>
-    </ThemeProvider>
+    </ThemeUIProvider>
 
 
   )

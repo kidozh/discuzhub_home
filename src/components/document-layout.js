@@ -4,7 +4,7 @@ import { Container, jsx, Heading, Link, Text } from "theme-ui"
 import { useIntl } from "gatsby-plugin-intl"
 import Layout from "./layout"
 import { graphql, useStaticQuery } from "gatsby"
-import { MDXProvider } from "@theme-ui/mdx"
+import { MDXProvider, useThemedStylesWithMdx } from "@theme-ui/mdx"
 
 
 
@@ -66,8 +66,8 @@ export default ({ subject, children }) => {
       <Container as="article" sx={{
         px:[2,4,6],
         py:[2,4,6],
-        pt:[1,2,2],
-        pb:[1,2,2]
+        pt:[2,4,6],
+        pb:[2,4,6]
       }}>
         <MDXProvider components={{
           a: Link

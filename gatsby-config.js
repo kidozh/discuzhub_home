@@ -39,9 +39,13 @@ module.exports = {
     ]
 
   },
-  flags: {
-    DEV_SSR: true
-  },
+  // flags: {
+  //   DEV_SSR: true,
+  //   FAST_DEV: true,
+  //   PARALLEL_SOURCING: true,
+  //   DETECT_NODE_MUTATIONS: true,
+  //   PRESERVE_WEBPACK_CACHE: true,
+  // },
   plugins: [
     {
       resolve: 'gatsby-plugin-theme-ui',
@@ -55,13 +59,13 @@ module.exports = {
     //`gatsby-plugin-offline`,
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-        omitGoogleFont: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/utils/typography`,
+    //     omitGoogleFont: true,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

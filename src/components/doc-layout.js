@@ -71,10 +71,10 @@ export default ({ subject, children }) => {
 
         </Container>
         <Container as="article" sx={{
-          px: [2, 4, 6],
-          py: [2, 4, 6],
-          pt: [2, 4, 4],
-          pb: [2, 4, 4]
+          px: [4, 6, 6],
+          // py: [2, 4, 6],
+          // pt: [2, 4, 4],
+          // pb: [2, 4, 4],
         }}>
           {/* <MDXProvider components={components}> */}
 

@@ -1,5 +1,5 @@
 {
-    "title": "Discuz Hub & DisFly",
+    "title": "DisFly",
     "description": "Easy, lightweight and open-sourced android app for cross-platform mobile",
     "intro": {
         "title": "Discuz Hub",
@@ -12,7 +12,12 @@
         "discuz_app":"Discuz! Android & iOS App",
         "disfly":"Provided by DisFly",
         "administrator_note":"You may use this link to make your bbs compatible with us!👉",
-        "disfly_provider":"Provided by DisFly"
+        "disfly_provider":"Provided by DisFly",
+        "discuzhub_title":"Discuz Hub",
+        "disfly_title":"DisFly",
+        "discuzhub_description":"Android Native",
+        "disfly_description":"Compatible with iOS and Android",
+        "recommended":"Recommended"
     },
     "feature": {
         "features": "Features",

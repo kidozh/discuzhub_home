@@ -60,7 +60,7 @@ const Header = () => {
               p: 2,
               fontSize:4,
               fontWeight:400
-            }}>{site.siteMetadata.title}</IntlLink>
+            }}>{intl.formatMessage({ id: "title" })}</IntlLink>
           </Box>
           <Box >
             <Grid columns={[1,6,6]} as="nav" sx={{

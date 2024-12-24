@@ -17,6 +17,8 @@ import AppStoreBadgeEn from "../../static/app-store/US/Download_on_App_Store/Bla
 import AppStoreBadgeZh from "../../static/app-store/CN(SC)/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_CNSC_RGB_blk_092917.svg"
 import AppStoreBadgeZhHK from "../../static/app-store/HKTW(TC)/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_CNTC_RGB_blk_100217.svg"
 import AppGallery from "../../static/app-gallery/AppGalleryBadge.svg"
+import Logo from "../../static/logo.svg"
+import DisFlyLogo from "../../static/disfly-logo.svg"
 
 class InfoCard extends React.Component {
 
@@ -38,7 +40,7 @@ class InfoCard extends React.Component {
             <Image sx={{
 
             }}
-                   width={128} height={64} src={this.props.imageLink} />
+              width={128} height={64} src={this.props.imageLink} />
           </p>
         </Box>
         <Box sx={{
@@ -83,7 +85,7 @@ class InfoCardReverse extends React.Component {
             <Image sx={{
               //float: ["right", "center", "center"]
             }}
-                   width={128} height={64} src={this.props.imageLink} />
+              width={128} height={64} src={this.props.imageLink} />
           </p>
 
         </Box>
@@ -92,155 +94,197 @@ class InfoCardReverse extends React.Component {
   }
 }
 
-function ShowPlayStoreBadge({intl}) {
-  if(intl.locale === "zh"){
+function ShowPlayStoreBadge({ intl }) {
+  if (intl.locale === "zh") {
     return (
       <Image src={PlayBadgeZh} alt={"Play store"} sx={{
-        height:70,
-        verticalAlign:"middle"
+        height: 70,
+        verticalAlign: "middle"
       }} />
     )
-  }else {
+  } else {
     return (
       <Image src={PlayBadgeEn} alt={"Play store"} sx={{
-        height:70,
-        verticalAlign:"middle"
-      }}/>
+        height: 70,
+        verticalAlign: "middle"
+      }} />
     )
   }
 }
 
-function ShowAppStoreBadge({intl}) {
-  if(intl.locale === "zh"){
+function ShowAppStoreBadge({ intl }) {
+  if (intl.locale === "zh") {
     return (
       <Image src={AppStoreBadgeZh} alt={"App Store"} sx={{
-        height:70,
-        verticalAlign:"middle"
+        height: 70,
+        verticalAlign: "middle"
       }} />
     )
   }
-  else if(intl.locale === "zh-hk"){
+  else if (intl.locale === "zh-hk") {
     return (
       <Image src={AppStoreBadgeZhHK} alt={"App Store"} sx={{
-        height:70,
-        verticalAlign:"middle"
+        height: 70,
+        verticalAlign: "middle"
       }} />
     )
   }
   else {
     return (
       <Image src={AppStoreBadgeEn} alt={"App Store"} sx={{
-        height:70,
-        verticalAlign:"middle"
-      }}/>
+        height: 70,
+        verticalAlign: "middle"
+      }} />
     )
   }
 }
 
 function HomePage() {
   const intl = useIntl();
-  return(
+  return (
     <Grid>
       {/* index page */}
-      <Container as="header" sx={{
-        bg:"#2c3e50",
-        p:[2,2,4],
-        pt:[4,4,6],
-        pb:[4,4,6],
-        textAlign:"center"
-      }}>
-        <Heading as="h1" sx={{
-          color:"primary",
-          fontSize:60,
-          fontWeight: 700
-        }}>Discuz Hub</Heading>
-        <Text as="p" sx={{
-          color: "rgb(255,255,255)",
-          mt:3,
-          fontSize: 30,
-          fontWeight: 200
-        }}><FormattedMessage id="intro.lightweight" /> <FormattedMessage id="intro.discuz_app" /></Text>
-        <Grid columns={[1,3,3]} sx={{
-          pl:[1,2,4],
-          pr:[1,2,4],
-          mt:4,
-          mb:4,
+      <Container p={0}>
+        <Grid columns={[1, 1, 2]} gap={0} sx={{
+          m: 0
         }}>
           <Box sx={{
-            textAlign: ["center", "center", "center"]
+            p: 4,
+            background: "#3949AB"
           }}>
-            <Link
-              href="https://apps.apple.com/us/app/%E8%B0%88%E5%9D%9B/id1601703772"
-              >
-
-              <ShowAppStoreBadge intl={intl} />
-              <br/>
-              
-            </Link>
-            <br/>
-            <Link
-              href="https://play.google.com/store/apps/details?id=com.kidozh.discuz_flutter"
-              >
-
-              <ShowPlayStoreBadge intl={intl} />
-              
-            </Link>
-            <br/>
-            <Text as="small" sx={{
-                color: "rgb(255,255,255)",
-                textAlign:"center"
+            <Text as="p" sx={{
+              textAlign: "center",
+            }}>
+              <Image src={DisFlyLogo}
+                               ratio={1}
+                               sx={{
+                                 width:128,
+                                 verticalAlign:"middle"
+            
+                               }} />
+            </Text>
+            <Text as="h1" sx={{
+              textAlign: "center",
+              color: "white",
+              mt: 2,
+              mb: 1
+            }}>
+              {intl.formatMessage({ id: "intro.disfly_title" })}
+              <Text as="small" sx={{
+                fontSize: 1,
+                p: 2,
+                bg: "#E8EAF6",
+                color: "#3949AB",
+                borderRadius: 8,
+                ml: 2,
+                alignContent: "center",
+                verticalAlign: "middle"
               }}>
-                {intl.formatMessage({"id":"intro.disfly"})}
+              {intl.formatMessage({ id: "intro.recommended" })}
               </Text>
-          </Box>
-          <Box sx={{
-            textAlign: ["center", "center", "center"]
-          }}>
-            <Link
-              href="https://play.google.com/store/apps/details?id=com.kidozh.discuzhub"
+            </Text>
+            <Text as="p" sx={{
+              textAlign: "center",
+              mb: 4,
+              color: "white",
+            }}><FormattedMessage id="intro.disfly_description" />
+            </Text>
+            
+            <Grid columns={[1, 2, 2]} gap={1} sx={{
+              alignContent: "center",
+              alignItems: "center",
+              justifyItems: "center",
+            }}>
+              <Box>
+                
+              <Link
+                href="https://apps.apple.com/us/app/%E8%B0%88%E5%9D%9B/id1601703772"
+                sx={{
+                  mb: 2,
+                  pb: 2
+                  
+                }}
+              >
+                <ShowAppStoreBadge intl={intl} />
+              </Link>
+              </Box>
+              <Box>
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.kidozh.discuz_flutter"
               >
 
-              <ShowPlayStoreBadge intl={intl} />
-              
-            </Link>
-            <br/>
-            <br/>
-            <Link
-              href="https://appgallery.cloud.huawei.com/ag/n/app/C105331315?channelId=Discuz+Hub+download+from+AppGallery&id=0ab329e643f64442b5540de9ace56780&s=C59880EBA1C60199ECC0A77459C35B87EF8D82F96F2623D568F704EC21C757AD&detailType=0&v=&callType=AGDLINK&installType=0000"
-              >
+                <ShowPlayStoreBadge intl={intl} />
 
-              <Image src={AppGallery} width={236} />
-              
-            </Link>
+              </Link>
+              </Box>
+            </Grid>
           </Box>
-          <Box sx={{
-            textAlign: ["center", "left", "left"],
-            mt:[2,2,3],
-            mb:[2,2,3],
+          <Box bg="muted" sx={{
+            p: 4,
           }}>
-            <Link
-              href="https://github.com/kidozh/DiscuzHub"
-              sx={{
-                fontSize: 24,
-                fontWeight: 400,
-                "&:hover":{
-                  color:"white",
-                  transition: "all .35s ease"
-                }
+            <Text as="p" sx={{
+              textAlign: "center",
+            }}>
+              <Image src={Logo}
+                               ratio={1}
+                               sx={{
+                                 width:128,
+                                 verticalAlign:"middle"
+            
+                               }} />
+            </Text>
+            
+            <Text as="h1" sx={{
+              textAlign: "center",
+              mb: 1,
+              mt: 2
+            }}>
+              
+              <FormattedMessage id="intro.discuzhub_title" />
+            </Text>
+            <Text as="p" sx={{
+              textAlign: "center",
+              mb: 4
+            }}><FormattedMessage id="intro.discuzhub_description" />
+            </Text>
+            <Grid columns={[1]} gap={1} sx={{
+              alignContent: "center",
+              alignItems: "center",
+              justifyItems: "center",
+            }}>
+              <Box sx={{
+                
               }}>
-              <FormattedMessage id="intro.project_at_github" />
-            </Link>
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.kidozh.discuzhub"
+              >
+
+                <ShowPlayStoreBadge intl={intl} />
+
+              </Link>
+              </Box>
+              {/* <Box>
+              <Link
+                href="https://appgallery.cloud.huawei.com/ag/n/app/C105331315?channelId=Discuz+Hub+download+from+AppGallery&id=0ab329e643f64442b5540de9ace56780&s=C59880EBA1C60199ECC0A77459C35B87EF8D82F96F2623D568F704EC21C757AD&detailType=0&v=&callType=AGDLINK&installType=0000"
+              >
+
+                <Image src={AppGallery} width={236} />
+
+              </Link>
+              </Box> */}
+
+            </Grid>
           </Box>
         </Grid>
-
       </Container>
+      
       <Grid columns={[1, '1fr 8fr 1fr', '1fr 6fr 1fr']}
-            sx={{
-              mb: 4,
-              mt: 4,
-              ml: 2,
-              mr: 2
-            }}>
+        sx={{
+          mb: 4,
+          mt: 4,
+          ml: 2,
+          mr: 2
+        }}>
         <Box />
         <Box sx={{
           p: 4,

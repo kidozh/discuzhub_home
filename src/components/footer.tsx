@@ -70,11 +70,11 @@ const Footer = () => {
           <h3>{intl.formatMessage({ id: "footer.notice" })}</h3>
           <p>{intl.formatMessage({ id: "footer.copyright" })} &copy; {new Date().getFullYear()}. {intl.formatMessage({ id: "footer.copyright_rights_reserved" })}</p>
           <p>{intl.formatMessage({ id: "about.about_description" })}, {intl.formatMessage({ id: "footer.docs_with" })}
-            <Link
+            <GatsbyLink
               aria-label="Link to the CC BY 4.0"
               href="https://creativecommons.org/licenses/by/4.0"
             >CC BY 4.0
-            </Link>
+            </GatsbyLink>
           </p>
         </Box>
         <Box>
@@ -87,12 +87,12 @@ const Footer = () => {
                 }}
           >
 
-            <Box><Link to="/term_of_use/">{intl.formatMessage({ id: "nav.terms_of_use" })}</Link></Box>
-            <Box><Link to="/privacy_policy/">{intl.formatMessage({ id: "nav.privacy" })}</Link></Box>
-            <Box><Link to="/test-my-bbs/">{intl.formatMessage({ id: "test-my-bbs.title" })}</Link></Box>
-            <Box><Link to="/open_source_licence/">{intl.formatMessage({ id: "open_source.open_source_title" })}</Link></Box>
-            <Box><Link to="/customize-bbs/">{intl.formatMessage({ id: "customize.customize_locally_title" })}</Link></Box>
-            <Box><Link to="/customize-bbs-in-github/">{intl.formatMessage({ id: "customize.customize_github_title" })}</Link></Box>
+            <Box><GatsbyLink href="/term_of_use/">{intl.formatMessage({ id: "nav.terms_of_use" })}</GatsbyLink></Box>
+            <Box><GatsbyLink href="/privacy_policy/">{intl.formatMessage({ id: "nav.privacy" })}</GatsbyLink></Box>
+            <Box><GatsbyLink href="/test-my-bbs/">{intl.formatMessage({ id: "test-my-bbs.title" })}</GatsbyLink></Box>
+            <Box><GatsbyLink href="/open_source_licence/">{intl.formatMessage({ id: "open_source.open_source_title" })}</GatsbyLink></Box>
+            <Box><GatsbyLink href="/customize-bbs/">{intl.formatMessage({ id: "customize.customize_locally_title" })}</GatsbyLink></Box>
+            <Box><GatsbyLink href="/customize-bbs-in-github/">{intl.formatMessage({ id: "customize.customize_github_title" })}</GatsbyLink></Box>
           </Grid>
         </Box>
 

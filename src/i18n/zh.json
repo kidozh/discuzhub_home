@@ -1,5 +1,5 @@
 {
-    "title": "Discuz Hub",
+    "title": "谈坛",
     "description": "轻量开源的Discuz！论坛应用",
     "intro": {
         "title": "Discuz Hub及谈坛",
@@ -12,7 +12,12 @@
         "discuz_app":"Discuz!跨平台应用",
         "disfly":"由谈坛提供服务",
         "administrator_note":"版主可以点击这里更好的兼容我们的应用👉",
-        "disfly_provider":"由谈坛提供服务"
+        "disfly_provider":"由谈坛提供服务",
+        "discuzhub_title":"Discuz Hub",
+        "disfly_title":"谈坛",
+        "discuzhub_description":"专为安卓设计",
+        "disfly_description":"跨平台iOS和安卓应用",
+        "recommended":"推荐"
     },
     "feature": {
         "features": "特性",
